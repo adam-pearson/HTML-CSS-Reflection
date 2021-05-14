@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"../_scss/styles.scss",
+		"../_scss/_main-styles/_main-styles.scss"
+	],
+	"sourcesContent": [
+		"@import \"_main-styles/main-styles\";",
+		"* {\r\n    box-sizing: border-box;\r\n}\r\n\r\n.main-container {\r\n    width: 100%;\r\n    height: 100vh;\r\n    min-height: 700px;\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": ";ACAA,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU,GACzB;;;AAED,AAAA,eAAe,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK,GACpB"
+}
