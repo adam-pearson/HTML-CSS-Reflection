@@ -23,33 +23,35 @@
   height: 56px;
   width: 63px;
   display: block;
-  padding: 10px 12px;
-  margin-right: 0px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.burger-container:hover {
+  background-color: #22242e;
 }
 
 .burger-box {
   position: relative;
   display: block;
   width: 33px;
-  height: 17px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .burger-inner {
   width: 33px;
   height: 3px;
   background-color: #fff;
-  position: absolute;
   display: block;
-  top: 1px;
+  position: absolute;
+  top: -9px;
 }
 
 .burger-inner::before {
   content: "";
-  display: block;
   width: 33px;
   height: 3px;
+  display: block;
   background-color: #fff;
   position: absolute;
   top: 8px;
@@ -72,7 +74,7 @@
   line-height: 1;
   margin: 5px 0 0 0;
   text-transform: uppercase;
-  top: 5px;
+  top: 12px;
   text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
