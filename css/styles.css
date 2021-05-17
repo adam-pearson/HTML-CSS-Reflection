@@ -95,4 +95,40 @@
   top: 12px;
   text-align: center;
 }
+
+/* Search box */
+.search-box {
+  margin: 0 auto;
+}
+
+.search-box form {
+  display: flex;
+  position: relative;
+}
+
+.search-box form input[type="text"] {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 15px;
+  height: 47px;
+}
+
+.search-submit {
+  color: #333645;
+  background: none;
+  position: absolute;
+  font-size: 20px;
+  height: 47px;
+  padding: 0 0;
+  width: 47px;
+  right: 2px;
+}
+
+.search-submit .fa-search {
+  position: absolute;
+  top: 15px;
+  right: 13px;
+}
 /*# sourceMappingURL=styles.css.map */
