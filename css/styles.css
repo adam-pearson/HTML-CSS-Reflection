@@ -6,14 +6,15 @@
 .header-container {
   margin-left: 15px;
   margin-right: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .header-top {
   display: flex;
   align-items: center;
   height: 56px;
-  margin: 30px auto;
+  margin-top: 26px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -56,7 +57,7 @@
   margin: 0 auto;
 }
 
-.burger-inner {
+.burger-lines {
   width: 33px;
   height: 3px;
   background-color: #fff;
@@ -65,7 +66,7 @@
   top: -9px;
 }
 
-.burger-inner::before {
+.burger-lines::before {
   content: "";
   width: 33px;
   height: 3px;
@@ -75,7 +76,7 @@
   top: 8px;
 }
 
-.burger-inner::after {
+.burger-lines::after {
   content: "";
   display: block;
   width: 33px;
@@ -104,6 +105,7 @@
 .search-box form {
   display: flex;
   position: relative;
+  font-size: .9em;
 }
 
 .search-box form input[type="text"] {
@@ -130,5 +132,77 @@
   position: absolute;
   top: 15px;
   right: 13px;
+}
+
+/* Hero Slider */
+.hero-slider-container {
+  background-color: #000;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 531px;
+  background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0.987) 8.1%, rgba(0, 0, 0, 0.951) 15.5%, rgba(0, 0, 0, 0.896) 22.5%, rgba(0, 0, 0, 0.825) 29%, rgba(0, 0, 0, 0.741) 35.3%, rgba(0, 0, 0, 0.648) 41.2%, rgba(0, 0, 0, 0.55) 47.1%, rgba(0, 0, 0, 0.45) 52.9%, rgba(0, 0, 0, 0.352) 58.8%, rgba(0, 0, 0, 0.259) 64.7%, rgba(0, 0, 0, 0.175) 71%, rgba(0, 0, 0, 0.104) 77.5%, rgba(0, 0, 0, 0.049) 84.5%, rgba(0, 0, 0, 0.013) 91.9%, rgba(0, 0, 0, 0) 100%);
+  background-size: cover;
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+.hero-image > img {
+  height: 531px;
+  width: 100%;
+  object-fit: cover;
+  opacity: .5;
+}
+
+.hero-content-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero-content h1, .hero-content p {
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin-bottom: 35px;
+}
+
+.hero-button {
+  padding: 5px 20px;
+  line-height: 50px;
+  border-radius: 3px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #926fb1;
+}
+
+.hero-button > .fa-arrow-right {
+  margin-left: 8px;
 }
 /*# sourceMappingURL=styles.css.map */
