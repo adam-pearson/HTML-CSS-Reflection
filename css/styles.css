@@ -205,4 +205,218 @@
 .hero-button > .fa-arrow-right {
   margin-left: 8px;
 }
+
+/* Service Cards */
+.service-list {
+  display: flex;
+  text-align: center;
+  padding: 50px 15px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-cards > * {
+  min-height: 312px;
+  margin-top: 30px;
+  border-radius: 3px;
+  flex: 1 100%;
+  border: 1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 35px 0px;
+  position: relative;
+}
+
+.service-cards > * > * {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 30px;
+  height: 100%;
+}
+
+.service-cards button {
+  border-radius: 3px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service {
+  color: #333645;
+}
+
+.service h2 {
+  font-size: 1.125rem;
+  padding-bottom: 17px;
+  margin: 0 0 11px;
+  font-weight: 400;
+  position: relative;
+}
+
+.service h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 28px;
+  height: 3px;
+  display: block;
+  background-color: #333645;
+}
+
+.service p {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 400;
+}
+
+.service .icon {
+  height: 60px;
+  width: 60px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+  line-height: 63px;
+  position: relative;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.service:hover {
+  color: #fff;
+  border-color: transparent;
+}
+
+.service:hover .btn {
+  background-color: #fff;
+}
+
+.service:hover .icon {
+  background-color: #fff;
+}
+
+.service:hover h2:after {
+  background-color: #fff;
+}
+
+.bespoke-software {
+  margin-top: 0;
+}
+
+.bespoke-software .icon, .bespoke-software .btn {
+  background-color: #67809f;
+}
+
+.bespoke-software:hover {
+  background-color: #67809f;
+}
+
+.bespoke-software:hover .btn {
+  color: #67809f;
+}
+
+.bespoke-software:hover .icon {
+  color: #67809f;
+}
+
+.it-support .icon, .it-support .btn {
+  background-color: #4183d7;
+}
+
+.it-support:hover {
+  background-color: #4183d7;
+}
+
+.it-support:hover .btn {
+  color: #4183d7;
+}
+
+.it-support:hover .icon {
+  color: #4183d7;
+}
+
+.digital-marketing .icon, .digital-marketing .btn {
+  background-color: #2ecc71;
+}
+
+.digital-marketing:hover {
+  background-color: #2ecc71;
+}
+
+.digital-marketing:hover .btn {
+  color: #2ecc71;
+}
+
+.digital-marketing:hover .icon {
+  color: #2ecc71;
+}
+
+.telecoms-services .icon, .telecoms-services .btn {
+  background-color: #d64541;
+}
+
+.telecoms-services:hover {
+  background-color: #d64541;
+}
+
+.telecoms-services:hover .btn {
+  color: #d64541;
+}
+
+.telecoms-services:hover .icon {
+  color: #d64541;
+}
+
+.web-design .icon, .web-design .btn {
+  background-color: #926fb1;
+}
+
+.web-design:hover {
+  background-color: #926fb1;
+}
+
+.web-design:hover .btn {
+  color: #926fb1;
+}
+
+.web-design:hover .icon {
+  color: #926fb1;
+}
+
+.cyber-security .icon, .cyber-security .btn {
+  background-color: #f62459;
+}
+
+.cyber-security:hover {
+  background-color: #f62459;
+}
+
+.cyber-security:hover .btn {
+  color: #f62459;
+}
+
+.cyber-security:hover .icon {
+  color: #f62459;
+}
+
+.developer-training .icon, .developer-training .btn {
+  background-color: #926fb1;
+}
+
+.developer-training:hover {
+  background-color: #926fb1;
+}
+
+.developer-training:hover .btn {
+  color: #926fb1;
+}
+
+.developer-training:hover .icon {
+  color: #926fb1;
+}
 /*# sourceMappingURL=styles.css.map */
