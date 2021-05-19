@@ -1,9 +1,20 @@
+/* Basic Styles */
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-.header-container {
+/* Button */
+.btn {
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  font-size: 1.063rem;
+}
+
+/*=====================================*/
+/* -------------- header section --------------*/
+#header-container {
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 20px;
@@ -34,7 +45,7 @@
   color: #333645;
 }
 
-/* Burger Menu Button */
+/* -------------- burger menu button --------------*/
 .burger-container {
   background-color: #333645;
   color: #fff;
@@ -97,7 +108,7 @@
   text-align: center;
 }
 
-/* Search box */
+/* ---------------- search box ----------------*/
 .search-box {
   margin: 0 auto;
 }
@@ -134,7 +145,7 @@
   right: 13px;
 }
 
-/* Hero Slider */
+/* ---------------- hero slider ----------------*/
 .hero-slider-container {
   background-color: #000;
 }
@@ -195,19 +206,17 @@
 .hero-button {
   padding: 5px 20px;
   line-height: 50px;
-  border-radius: 3px;
   font-size: 1.25rem;
   font-weight: 400;
-  text-transform: uppercase;
   background-color: #926fb1;
 }
 
-.hero-button > .fa-arrow-right {
+.btn > .fa-arrow-right {
   margin-left: 8px;
 }
 
-/* Service Cards */
-.service-list {
+/* ---------------- service cards ----------------*/
+#service-list {
   display: flex;
   text-align: center;
   padding: 50px 15px;
@@ -237,7 +246,7 @@
 }
 
 .service-cards button {
-  border-radius: 3px;
+  text-transform: uppercase;
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
@@ -419,4 +428,39 @@
 .developer-training:hover .icon {
   color: #926fb1;
 }
+
+/* ------------------- about -------------------*/
+#about-container {
+  color: #fff;
+  background-color: #333645;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.about p {
+  margin-bottom: 25px;
+  line-height: 1.875rem;
+}
+
+.about h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 28;
+}
+
+.about .btn {
+  color: #333645;
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*------------------ Latest ------------------*/
 /*# sourceMappingURL=styles.css.map */
