@@ -741,6 +741,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     color: $primary-colour;
+    margin-bottom: 15px;
     & a:visited {
         color: $primary-colour;
     }
@@ -757,3 +758,68 @@ body {
 
 /*------------ footer ------------*/
 
+footer {
+    background-color: $primary-colour;
+    color: $white;
+}
+
+.footer-inner {
+    padding: 47px 15px 43px;
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    h4 {
+        margin-top: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    li:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer-column-1 {
+    margin-bottom: 30px;
+}
+
+.footer-column-2 {
+    padding-bottom: 30px;
+    ul {
+        margin: 0;
+    }
+    ul li:nth-child(4) {
+        padding-bottom: 50px;
+    }
+}
+
+.footer-column-3 {
+    padding-bottom: 30px;
+    ul {
+        margin: 0;
+    }
+    ul li:nth-child(4) {
+        padding-bottom: 25px;
+    }
+}
+
+.footer-column-4 {
+    h4 {
+        margin-bottom: 0px;
+    }
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    .social {
+        flex: 1 40%;
+        margin-top: 30px;
+        font-size: 1.75rem;
+        line-height: 3.5rem;
+        text-align: center;
+        background-color: rgba(0,0,0,.25);
+        &:nth-child(odd) {
+            margin-right: 30px;
+        }
+    }
+}
