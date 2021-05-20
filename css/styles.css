@@ -766,6 +766,10 @@ body {
   margin-bottom: 15px;
 }
 
+.checkbox-text a {
+  text-decoration: underline;
+}
+
 .checkbox-text a:visited {
   color: #333645;
 }
@@ -798,7 +802,7 @@ footer {
   text-transform: uppercase;
 }
 
-.footer-inner li:hover {
+.footer-inner a:hover {
   text-decoration: underline;
 }
 
@@ -837,6 +841,7 @@ footer {
 .social-buttons {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 10px;
 }
 
 .social-buttons .social {
@@ -850,5 +855,27 @@ footer {
 
 .social-buttons .social:nth-child(odd) {
   margin-right: 30px;
+}
+
+.social-buttons a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.facebook-button:hover {
+  background-color: #3b5998;
+}
+
+.twitter-button:hover {
+  background-color: #00aced;
+}
+
+.instagram-button:hover {
+  background-color: #d93175;
+}
+
+.linkedin-button:hover {
+  background-color: #0077b5;
 }
 /*# sourceMappingURL=styles.css.map */
