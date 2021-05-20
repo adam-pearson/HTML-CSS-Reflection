@@ -189,6 +189,8 @@ body {
   margin-right: 10%;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-content h1, .hero-content p {
@@ -445,6 +447,8 @@ body {
 .about {
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about p {
@@ -509,6 +513,8 @@ body {
 .latest-cards {
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .latest-cards > * {
@@ -517,6 +523,12 @@ body {
 
 .img-container {
   position: relative;
+  overflow: hidden;
+}
+
+.img-container:hover img {
+  transform: scale(1.1);
+  opacity: .75;
 }
 
 .latest-category {
@@ -533,12 +545,16 @@ body {
   font-weight: 600;
 }
 
+.latest-category:hover {
+  text-decoration: underline;
+}
+
 .latest-img img {
   display: block;
   position: relative;
   border-radius: 3px 3px 0 0;
-  overflow: hidden;
   width: 100%;
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .latest-content {
@@ -630,4 +646,137 @@ body {
 }
 
 /*--------------- Newsletter Signup ---------------*/
+#newsletter-container {
+  background-color: #ddd;
+}
+
+.newsletter-inner {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-up {
+  padding: 50px 30px;
+}
+
+.sign-up h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.sign-up-input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sign-up-input {
+  flex: 1 1 450px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.newsletter label {
+  display: inline-block;
+  color: #333645;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.newsletter label::after {
+  content: "*";
+  color: #d24d57;
+}
+
+.sign-up-field {
+  height: 47px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  border-color: #ccc;
+  padding: 5px 15px;
+}
+
+.sign-up-field:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+/* Checkbox */
+.marketing-check-content {
+  display: table;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #333645;
+}
+
+.checkmark {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  background-color: #ddd;
+  border-radius: 3px;
+  border: 3px solid #333645;
+}
+
+.checkmark .fa-check {
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark .fa-check {
+  display: block;
+}
+
+.checkmark .fa-check {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #fff;
+}
+
+.checkbox-text {
+  display: block;
+  margin-top: 7px;
+  margin-left: 50px;
+  line-height: 32px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333645;
+}
+
+.checkbox-text a:visited {
+  color: #333645;
+}
+
+/* Button */
+.btn-newsletter {
+  background-color: #333645;
+}
+
+.btn-newsletter:hover {
+  background-color: #22242e;
+}
+
+/*------------ footer ------------*/
 /*# sourceMappingURL=styles.css.map */

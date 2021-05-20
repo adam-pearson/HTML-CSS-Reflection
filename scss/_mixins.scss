@@ -19,3 +19,10 @@
       hsla(0, 0%, 0%, 0) 100%
   );
 }
+
+@mixin padding {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -8,10 +8,11 @@
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">  
 </head>
 
 <body>
+<!-------------- header section -------------->
    <div id="header-container">
        <div class="header-top">
            <div class="logo-container">
@@ -44,6 +45,7 @@
            </form>
        </div>
    </div>
+<!-------------- hero slider -------------->
    <div class="hero-slider-container">
         <div class="hero-slider">
             <div class="hero-image">
@@ -61,6 +63,7 @@
             </div>
         </div>
    </div>
+<!-------------- service list -------------->
    <div id="service-list">
        <div class="service-cards">
             <div class="bespoke-software">
@@ -149,6 +152,7 @@
             </div>
        </div>
    </div>
+<!-------------- about section -------------->
    <div id="about-container">
        <div class="about">
            <h1>Netmatters</h1>
@@ -163,6 +167,7 @@
             </a>
         </div>
    </div>
+<!-------------- latest section -------------->
    <div id="latest-container">
         <div class="latest-top-container">
             <div class="latest-top">
@@ -175,7 +180,7 @@
                 <div class="latest-card-1">
                     <div class="img-container">
                         <a href="#" class="latest-category">Careers</a>
-                        <a class="latest-img">
+                        <a class="latest-img" href="#">
                             <img src="/img/senior-it-support-Vfd9.webp" alt="Now Hiring Support Technician">
                         </a>
                     </div>
@@ -201,7 +206,7 @@
                 <div class="latest-card-2">
                     <div class="img-container">
                         <a href="#" class="latest-category">News</a>
-                        <a class="latest-img">
+                        <a class="latest-img" href="#">
                             <img src="/img/congratulations-to-lloyd-D2cu.jpg" alt="Another Scion Graduates">
                         </a>
                     </div>
@@ -227,7 +232,7 @@
                 <div class="latest-card-3">
                     <div class="img-container">
                         <a href="#" class="latest-category">News</a>
-                        <a class="latest-img">
+                        <a class="latest-img" href="#">
                             <img src="/img/april-2021-notables-CIV3.jpg" alt="April 2021 Notables">
                         </a>
                     </div>
@@ -253,4 +258,40 @@
             </div>
         </div>
    </div>
+<!------------ newsletter signup ------------>
+    <div id="newsletter-container">
+        <div class="newsletter-inner">
+           <form method="POST" action="#" id="sign-up" class="sign-up">
+               <h2>Email Newsletter Sign-Up</h2>
+                <div class="sign-up-input-wrapper">
+                    <div class="sign-up-input">
+                        <div class="newsletter form-group">
+                            <label for="newsletter-name" class="required">Your Name</label>
+                            <input class="sign-up-field" id="newsletter-name" name="name" type="text">
+                        </div>
+                    </div>
+                    <div class="sign-up-input">
+                        <div class="newsletter form-group">
+                            <label for="newsletter-email" class="required">Your Email</label>
+                            <input class="sign-up-field" id="newsletter-email" name="email" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="marketing-check form-group">
+                    <div class="marketing-check-content">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="checkbox-text">
+                                Please tick this box if you wish to receive marketing information from us. Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <button name="submit" class="btn btn-newsletter">Subscribe</button>
+            </form>
+        </div>
+    </div>
 </body>
