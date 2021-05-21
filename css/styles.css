@@ -1,24 +1,3 @@
-@media screen and (max-width: 767px) {
-  .md-search {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .s-search-box,
-  .phone-container {
-    display: none;
-  }
-  .logo-container {
-    max-width: 50%;
-  }
-  #header-container {
-    width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 /* Basic Styles */
 * {
   box-sizing: border-box;
@@ -534,13 +513,15 @@ body {
 }
 
 .latest-cards {
+  display: flex;
+  flex-wrap: wrap;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.latest-cards > * {
+.latest-cards > * + * {
   margin-top: 30px;
 }
 
@@ -941,5 +922,77 @@ footer {
   position: absolute;
   top: 17px;
   left: 22px;
+}
+
+@media screen and (max-width: 767px) {
+  .md-search {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .s-search-box,
+  .phone-container {
+    display: none;
+  }
+  .logo-container {
+    max-width: 50%;
+  }
+  #header-container {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-content {
+    width: 750px;
+  }
+  #service-list {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .service-cards > .telecoms-services,
+  .service-cards .web-design,
+  .service-cards .cyber-security,
+  .service-cards .developer-training {
+    flex: 1 45%;
+  }
+  .service-cards div:nth-child(2n+5) {
+    margin-left: 30px;
+  }
+  .about {
+    width: 750px;
+  }
+  .latest-top {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .latest-cards-container {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .latest-cards {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-top: auto;
+  }
+  .latest-card-1 {
+    margin-top: auto;
+    align-self: stretch;
+  }
+  .latest-card-2 {
+    align-self: stretch;
+    margin-top: auto;
+    margin-left: 30px;
+  }
+  .latest-card-3 {
+    display: none;
+  }
+  .latest-content h3 {
+    min-height: 3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

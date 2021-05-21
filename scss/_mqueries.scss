@@ -9,12 +9,82 @@
     .phone-container {
         display: none;
     }
+
     .logo-container {
         max-width: 50%;
     }
+
     #header-container {
         width: 750px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    .hero-content {
+        width: 750px;
+    }
+
+    #service-list {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-cards {
+        > .telecoms-services,
+        .web-design,
+        .cyber-security,
+        .developer-training {
+            flex: 1 45%;
+        }
+        & div:nth-child(2n+5) {
+            margin-left: 30px;
+        }
+    }   
+
+    .about {
+        width: 750px;
+    }
+
+    .latest-top {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .latest-cards-container {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .latest-cards {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        margin-top: auto;
+    }
+
+    .latest-card {
+        &-1 {
+            margin-top: auto;
+            align-self: stretch;
+        }
+        &-2 {
+            align-self: stretch;
+
+            margin-top: auto;
+            margin-left: 30px;
+        }
+        &-3 {
+            display: none;
+        } 
+    }
+
+    .latest-content {
+        h3 {
+            min-height: 3rem;
+        }
+    }
+
 }
