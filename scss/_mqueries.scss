@@ -1,0 +1,20 @@
+@media screen and (max-width: 767px) {
+    .md-search {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .s-search-box,
+    .phone-container {
+        display: none;
+    }
+    .logo-container {
+        max-width: 50%;
+    }
+    #header-container {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

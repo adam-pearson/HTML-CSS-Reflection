@@ -1,0 +1,65 @@
+Breakpoints
+
+S - Max Width: 767
+M - Min-width: 768
+L - Min-width: 992
+XL - Min-width: 1260
+
+
+S to M:
+
+Header:
+- Search bar below logo disappears
+- Phone icon disappears
+- New search bar appears to the left of the burger menu
+
+Cards:
+- Telecoms services, web design, cyber security, developer training turn into side-by-side cards on 2 rows, rest remain the same
+
+Latest:
+- Third card disappears, other two are side-by-side on a row
+
+Logos area:
+- New area appears between latest and newsletter showing four logos side-by-side
+
+Footer: 
+- About and Gorleston Branch shows up on the left column, rest show up on the right column
+- Footer logos appear below the footer on two rows
+
+
+M to L:
+
+Header:
+- Search bar changes to a search button
+- Support and Contact buttons appear
+- Nav bar appears 
+
+Hero:
+- Hero text/button are left-aligned and stuck to the left side
+
+Cards: 
+- First 3 cards appear on 1 row, remaining four remain on 2 rows
+
+About:
+- Netmatters logo appears in the background
+
+Newsletter: 
+- Forms appear side-by-side
+
+
+L to XL:
+
+Header: 
+- Search button turns back into search bar
+
+Cards:
+- Last 4 cards appear on one row
+
+Latest:
+- 3 cards appear on one row
+
+Footer: 
+- Footer appears in one row
+
+Footer logos:
+- Logos appear on one row
