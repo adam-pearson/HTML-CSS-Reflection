@@ -173,7 +173,6 @@ body {
 .hero-slider {
     width: 100%;
     height: 531px;
-    @include black-transparent-grad;
     background-size: cover;
     display: flex;
     position: relative;
@@ -189,6 +188,7 @@ body {
 }
 
 .hero-content-container {
+    background: $black-transp-grad;
     position: absolute;
     top: 0;
     right: 0;
