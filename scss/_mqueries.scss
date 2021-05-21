@@ -87,4 +87,20 @@
         }
     }
 
+    .newsletter-inner {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-flex {
+        width: 750px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        * {
+            flex: 1 50%;
+        }
+    }
+
 }
