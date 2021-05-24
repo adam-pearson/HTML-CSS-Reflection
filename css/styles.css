@@ -1165,6 +1165,10 @@ footer {
   background-color: #79539a;
 }
 
+.web .web-menu::before, .web .web-menu::after {
+  background-color: #79539a;
+}
+
 .web:hover web-menu {
   display: block;
 }
@@ -1181,7 +1185,11 @@ footer {
   color: #fff;
 }
 
-.it:hover .it-menu {
+.it .it-menu {
+  background-color: #286abd;
+}
+
+.it .it-menu::before, .it .it-menu::after {
   background-color: #286abd;
 }
 
@@ -1205,6 +1213,10 @@ footer {
   background-color: #bc2c28;
 }
 
+.telecoms .telecoms-menu::before, .telecoms .telecoms-menu::after {
+  background-color: #bc2c28;
+}
+
 .telecoms:hover .telecoms-menu {
   display: block;
 }
@@ -1222,6 +1234,10 @@ footer {
 }
 
 .software .software-menu {
+  background-color: #526781;
+}
+
+.software .software-menu::before, .software .software-menu::after {
   background-color: #526781;
 }
 
@@ -1245,6 +1261,10 @@ footer {
   background-color: #25a25a;
 }
 
+.digital .digital-menu::before, .digital .digital-menu::after {
+  background-color: #25a25a;
+}
+
 .digital:hover .digital-menu {
   display: block;
 }
@@ -1262,6 +1282,10 @@ footer {
 }
 
 .security .security-menu {
+  background-color: #de093f;
+}
+
+.security .security-menu::before, .security .security-menu::after {
   background-color: #de093f;
 }
 

@@ -1119,6 +1119,9 @@ footer {
     }
     .web-menu {
         background-color: $purple-2;
+        &::before, &::after {
+            background-color: $purple-2;
+        }
     }
     &:hover web-menu {
         display: block;
@@ -1134,9 +1137,12 @@ footer {
         i {
             color: $white;
         }
+    }
     .it-menu {
         background-color: $blue-2;
-    }
+        &::before, &::after {
+            background-color: $blue-2;
+        }
     }
     &:hover .it-menu {
         display: block;
@@ -1155,6 +1161,9 @@ footer {
     }
     .telecoms-menu {
         background-color: $red-2;
+        &::before, &::after {
+            background-color: $red-2;
+        }
     }
     &:hover .telecoms-menu {
         display: block;
@@ -1173,6 +1182,9 @@ footer {
     }
     .software-menu {
         background-color: $dark-blue-2;
+        &::before, &::after {
+            background-color: $dark-blue-2;
+        }
     }
     &:hover .software-menu {
         display: block;
@@ -1191,6 +1203,9 @@ footer {
     }
     .digital-menu {
         background-color: $green-2;
+        &::before, &::after {
+            background-color: $green-2;
+        }
     }
     &:hover .digital-menu {
         display: block;
@@ -1209,6 +1224,9 @@ footer {
     }
     .security-menu {
         background-color: $pink-2;
+        &::before, &::after {
+            background-color: $pink-2;
+        }
     }
     &:hover .security-menu {
         display: block;
