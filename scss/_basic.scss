@@ -167,25 +167,21 @@ body {
 }
 
 .hero-slider {
-    width: 100%;
-    min-height: 531px;
-    height: 100vh;
+    max-height: 531px;
     background-size: cover;
     position: relative;
     text-align: center;
-
 }
 
 .hero-image > img {
-    min-height: 531px;
-    height: 100vh;
     width: 100%;
+    height: 531px;
     object-fit: cover;
     opacity: .5;
 }
 
 .hero-content-container {
-    background: $black-transp-grad;
+    background: linear-gradient(270deg, transparent 25%, #000);
     position: absolute;
     top: 0;
     right: 0;

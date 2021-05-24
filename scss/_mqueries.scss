@@ -135,8 +135,32 @@
     .hero-slider {
         text-align: left;
     }
-    .hero-content-container {
+    .hero-content {
         width: 970px;
+        @include padding;
+    }
+    .hero-image {
+        height: 490px;
+    }
+    .hero-image img {
+        height: 490px;
     }
     
+    #service-list {
+        width: 970px;
+    }
+
+    .service-cards {
+        align-items: stretch;
+        > .bespoke-software,
+        .it-support,
+        .digital-marketing,
+        {
+            flex: 1 30%;
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+    }
+
 }
