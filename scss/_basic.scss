@@ -72,6 +72,9 @@ body {
     &:hover {
         background-color: $primary-shade;
     }
+    &:focus {
+        outline: none;
+    }
 }
 
 
@@ -870,6 +873,11 @@ footer {
         line-height: 1.4;
         color: #555;
     }
+    &:focus {
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08), 0 0 8px rgba(91, 192, 222, .6);
+    }
 }
 
 #md-search-submit {
@@ -886,6 +894,9 @@ footer {
         position: absolute;
         top: 17px;
         left: 22px;
+    }
+    &:hover {
+        background-color: #7e808a;
     }
 }
 
@@ -1050,9 +1061,15 @@ footer {
     }
     &-support {
         background-color: $blue;
+        &:hover {
+            background-color: #2a7ec6;
+        }
     }
     &-contact {
         background-color: $button-grey;
+        &:hover {
+            background-color: #84858f;
+        }
     }
 }
 

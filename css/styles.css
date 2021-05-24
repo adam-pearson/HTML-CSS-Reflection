@@ -69,6 +69,10 @@ body {
   background-color: #22242e;
 }
 
+.burger-container:focus {
+  outline: none;
+}
+
 .burger-box {
   position: relative;
   display: block;
@@ -904,6 +908,12 @@ footer {
   color: #555;
 }
 
+.md-search-bar:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
 #md-search-submit {
   margin: 0;
   display: inline-block;
@@ -920,6 +930,10 @@ footer {
   position: absolute;
   top: 17px;
   left: 22px;
+}
+
+#md-search-submit:hover {
+  background-color: #7e808a;
 }
 
 /* ------------ logo section --------------*/
@@ -1089,8 +1103,16 @@ footer {
   background-color: #4183d7;
 }
 
+.button-support:hover {
+  background-color: #2a7ec6;
+}
+
 .button-contact {
   background-color: #999aa2;
+}
+
+.button-contact:hover {
+  background-color: #84858f;
 }
 
 /*--------------- nav bar ---------------*/
