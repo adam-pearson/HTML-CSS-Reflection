@@ -127,15 +127,16 @@
     #md-search-submit {
         border-radius: 3px;
     }
-    .button-support {
-        display: block;
-    }
-
-    .button-contact {
-        display: block;
-    }
-
+    .button-support,
+    .button-contact,
     #nav-container {
         display: block;
     }
+    .hero-slider {
+        text-align: left;
+    }
+    .hero-content-container {
+        width: 970px;
+    }
+    
 }

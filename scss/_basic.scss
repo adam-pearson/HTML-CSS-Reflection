@@ -198,8 +198,6 @@ body {
 }
 
 .hero-content {
-    margin-left: 10%;
-    margin-right: 10%;
     @include padding;
 }
 
@@ -1140,6 +1138,12 @@ footer {
         i {
             color: $white;
         }
+    .it-menu {
+        background-color: $blue-2;
+    }
+    }
+    &:hover .it-menu {
+        display: block;
     }
 }
 
@@ -1153,6 +1157,12 @@ footer {
             color: $white;
         }
     }
+    .telecoms-menu {
+        background-color: $red-2;
+    }
+    &:hover .telecoms-menu {
+        display: block;
+    }
 }
 
 .software {
@@ -1164,6 +1174,12 @@ footer {
         i {
             color: $white;
         }
+    }
+    .software-menu {
+        background-color: $dark-blue-2;
+    }
+    &:hover .software-menu {
+        display: block;
     }
 }
 
@@ -1177,6 +1193,12 @@ footer {
             color: $white;
         }
     }
+    .digital-menu {
+        background-color: $green-2;
+    }
+    &:hover .digital-menu {
+        display: block;
+    }
 }
 
 .security {
@@ -1188,6 +1210,12 @@ footer {
         i {
             color: $white;
         }
+    }
+    .security-menu {
+        background-color: $pink-2;
+    }
+    &:hover .security-menu {
+        display: block;
     }
 }
 

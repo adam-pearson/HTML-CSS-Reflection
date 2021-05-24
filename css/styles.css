@@ -190,8 +190,6 @@ body {
 }
 
 .hero-content {
-  margin-left: 10%;
-  margin-right: 10%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -1186,6 +1184,14 @@ footer {
   color: #fff;
 }
 
+.it:hover .it-menu {
+  background-color: #286abd;
+}
+
+.it:hover .it-menu {
+  display: block;
+}
+
 .telecoms i {
   color: #d64541;
 }
@@ -1196,6 +1202,14 @@ footer {
 
 .telecoms:hover i {
   color: #fff;
+}
+
+.telecoms .telecoms-menu {
+  background-color: #bc2c28;
+}
+
+.telecoms:hover .telecoms-menu {
+  display: block;
 }
 
 .software i {
@@ -1210,6 +1224,14 @@ footer {
   color: #fff;
 }
 
+.software .software-menu {
+  background-color: #526781;
+}
+
+.software:hover .software-menu {
+  display: block;
+}
+
 .digital i {
   color: #2ecc71;
 }
@@ -1222,6 +1244,14 @@ footer {
   color: #fff;
 }
 
+.digital .digital-menu {
+  background-color: #25a25a;
+}
+
+.digital:hover .digital-menu {
+  display: block;
+}
+
 .security i {
   color: #f62459;
 }
@@ -1232,6 +1262,14 @@ footer {
 
 .security:hover i {
   color: #fff;
+}
+
+.security .security-menu {
+  background-color: #de093f;
+}
+
+.security:hover .security-menu {
+  display: block;
 }
 
 .nav-submenu {
@@ -1393,14 +1431,16 @@ footer {
   #md-search-submit {
     border-radius: 3px;
   }
-  .button-support {
-    display: block;
-  }
-  .button-contact {
-    display: block;
-  }
+  .button-support,
+  .button-contact,
   #nav-container {
     display: block;
+  }
+  .hero-slider {
+    text-align: left;
+  }
+  .hero-content-container {
+    width: 970px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
