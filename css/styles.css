@@ -6,6 +6,7 @@
 
 body {
   letter-spacing: .4px;
+  overflow-x: hidden;
 }
 
 /* Button */
@@ -155,6 +156,7 @@ body {
 /* ---------------- hero slider ----------------*/
 .hero-slider-container {
   background-color: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 .hero-slider {
@@ -1079,6 +1081,213 @@ footer {
   opacity: 1;
 }
 
+/*--------------- large mq styles ---------------*/
+.button-support, .button-contact {
+  display: none;
+  height: 56px;
+  line-height: 46px;
+  font-size: 1.125rem;
+  margin-left: 20px;
+}
+
+.button-support {
+  background-color: #4183d7;
+}
+
+.button-contact {
+  background-color: #999aa2;
+}
+
+/*--------------- nav bar ---------------*/
+#nav-container {
+  background-color: #333645;
+  display: none;
+}
+
+.nav-inner {
+  width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-inner > ul {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.nav-flex > li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.nav-flex > li > a {
+  position: relative;
+  display: block;
+  color: #fff;
+  padding: 19px 0 18px;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.nav-flex > li > a i {
+  font-size: 1.2rem;
+  display: block;
+  padding-bottom: 12px;
+}
+
+.nav-flex > li > a small {
+  display: block;
+  font-size: .625rem;
+  padding-bottom: 2px;
+}
+
+.web i {
+  color: #926fb1;
+}
+
+.web:hover {
+  background-color: #926fb1;
+}
+
+.web:hover i {
+  color: #fff;
+}
+
+.web .web-menu {
+  background-color: #79539a;
+}
+
+.web:hover web-menu {
+  display: block;
+}
+
+.it i {
+  color: #4183d7;
+}
+
+.it:hover {
+  background-color: #4183d7;
+}
+
+.it:hover i {
+  color: #fff;
+}
+
+.telecoms i {
+  color: #d64541;
+}
+
+.telecoms:hover {
+  background-color: #d64541;
+}
+
+.telecoms:hover i {
+  color: #fff;
+}
+
+.software i {
+  color: #67809f;
+}
+
+.software:hover {
+  background-color: #67809f;
+}
+
+.software:hover i {
+  color: #fff;
+}
+
+.digital i {
+  color: #2ecc71;
+}
+
+.digital:hover {
+  background-color: #2ecc71;
+}
+
+.digital:hover i {
+  color: #fff;
+}
+
+.security i {
+  color: #f62459;
+}
+
+.security:hover {
+  background-color: #f62459;
+}
+
+.security:hover i {
+  color: #fff;
+}
+
+.nav-submenu {
+  padding: 0 15px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  z-index: 10;
+  list-style: none;
+}
+
+.nav-submenu li {
+  float: left;
+  font-size: .8125rem;
+  text-transform: uppercase;
+  line-height: 2.813rem;
+}
+
+.nav-submenu li:not(:first-child) {
+  padding-left: 20px;
+}
+
+.nav-submenu li:not(:last-child)::after {
+  content: "-";
+  padding-left: 20px;
+  color: #fff;
+}
+
+.nav-submenu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 2000px;
+  background-color: #79539a;
+}
+
+.nav-submenu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 2000px;
+  background-color: #79539a;
+}
+
+.web:hover ul {
+  display: block;
+}
+
 @media screen and (max-width: 767px) {
   .md-search {
     display: none;
@@ -1170,6 +1379,27 @@ footer {
     margin-right: 30px;
   }
   .accred-container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #header-container {
+    width: 970px;
+  }
+  #header-container input {
+    display: none;
+  }
+  #md-search-submit {
+    border-radius: 3px;
+  }
+  .button-support {
+    display: block;
+  }
+  .button-contact {
+    display: block;
+  }
+  #nav-container {
     display: block;
   }
 }

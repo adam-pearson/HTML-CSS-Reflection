@@ -115,3 +115,27 @@
         display: block;
     }
 }
+
+
+@media screen and (min-width: 992px) {
+    #header-container {
+        width: 970px;
+        input {
+            display: none;
+        }
+    }
+    #md-search-submit {
+        border-radius: 3px;
+    }
+    .button-support {
+        display: block;
+    }
+
+    .button-contact {
+        display: block;
+    }
+
+    #nav-container {
+        display: block;
+    }
+}

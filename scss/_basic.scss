@@ -7,6 +7,7 @@
 
 body {
     letter-spacing: .4px;
+    overflow-x: hidden;
 }
 
 /* Button */
@@ -162,6 +163,7 @@ body {
 
 .hero-slider-container {
     background-color: #000;
+    border-top: 1px solid hsla(0,0%,100%,.65);
 }
 
 .hero-slider {
@@ -1039,4 +1041,202 @@ footer {
             opacity: 1;
         }
     }
+}
+
+/*--------------- large mq styles ---------------*/
+
+.button {
+    &-support,
+    &-contact {
+        display: none;
+        height: 56px;
+        line-height: 46px;
+        font-size: 1.125rem;
+        margin-left: 20px;
+    }
+    &-support {
+        background-color: $blue;
+    }
+    &-contact {
+        background-color: $button-grey;
+    }
+}
+
+/*--------------- nav bar ---------------*/
+
+#nav-container {
+    background-color: $primary-colour;
+    display: none;
+}
+
+.nav-inner {
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    @include padding;
+    > ul {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid hsla(0, 0%, 100%, .1);
+        border-right: 1px solid rgba(0, 0, 0, .25);
+    }
+}
+
+
+.nav-flex > li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid hsla(0, 0%, 100%, .1);
+    border-left: 1px solid rgba(0, 0, 0, .25);
+    > a {
+        position: relative;
+        display: block;
+        color: $white;
+        padding: 19px 0 18px;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        line-height: 1;
+        i {
+            font-size: 1.2rem;
+            display: block;
+            padding-bottom: 12px;
+        }
+        small {
+            display: block;
+            font-size: .625rem;
+            padding-bottom: 2px;
+        }
+    }
+}
+
+.web {
+    i {
+        color: $purple;
+    }
+    &:hover {
+        background-color: $purple;
+        i {
+            color: $white;
+        }
+    }
+    .web-menu {
+        background-color: $purple-2;
+    }
+    &:hover web-menu {
+        display: block;
+    }
+}
+
+.it {
+    i {
+        color: $blue;
+    }
+    &:hover {
+        background-color: $blue;
+        i {
+            color: $white;
+        }
+    }
+}
+
+.telecoms {
+    i {
+        color: $red;
+    }
+    &:hover {
+        background-color: $red;
+        i {
+            color: $white;
+        }
+    }
+}
+
+.software {
+    i {
+        color: $dark-blue;
+    }
+    &:hover {
+        background-color: $dark-blue;
+        i {
+            color: $white;
+        }
+    }
+}
+
+.digital {
+    i {
+        color: $green;
+    }
+    &:hover {
+        background-color: $green;
+        i {
+            color: $white;
+        }
+    }
+}
+
+.security {
+    i {
+        color: $pink;
+    }
+    &:hover {
+        background-color: $pink;
+        i {
+            color: $white;
+        }
+    }
+}
+
+.nav-submenu {
+    padding: 0 15px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    z-index: 10;
+    list-style: none;
+    li {
+        float: left;
+        font-size: .8125rem;
+        text-transform: uppercase;
+        line-height: 2.813rem;
+        &:not(:first-child) {
+            padding-left: 20px;
+        }
+        &:not(:last-child)::after {
+            content: "-";
+            padding-left: 20px;
+            color: $white;
+        }
+    }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 2000px;
+        background-color: $purple-2;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 2000px;
+        background-color: $purple-2;
+    }
+}
+
+
+.web:hover ul {
+    display: block;
 }
