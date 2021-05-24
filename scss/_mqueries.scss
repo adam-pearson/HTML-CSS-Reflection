@@ -93,6 +93,10 @@
         margin-right: auto;
     }
 
+    #logo-section {
+        display: block;
+    }
+
     .footer-flex {
         width: 750px;
         margin: auto;
@@ -103,4 +107,11 @@
         }
     }
 
+    .social-buttons {
+        margin-right: 30px;
+    }
+
+    .accred-container {
+        display: block;
+    }
 }
