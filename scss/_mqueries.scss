@@ -154,8 +154,7 @@
         align-items: stretch;
         > .bespoke-software,
         .it-support,
-        .digital-marketing,
-        {
+        .digital-marketing {
             flex: 1 30%;
             &:not(:first-child) {
                 margin-left: 30px;
@@ -181,5 +180,39 @@
         width: 970px;
     }
 
+    .latest-top {
+        width: 970px;
+    }
 
+    .latest-cards-container {
+        width: 970px;
+
+    }
+
+    .logos-container {
+        width: 970px;
+    }
+
+    .newsletter-inner {
+        width: 970px;
+    }
+
+    .sign-up-input {
+        flex: 1 1 450px;
+        flex-basis: 46.591%;
+        &:last-child {
+            padding-left: 30px;
+        }
+    }
+
+    .footer-flex {
+        width: 970px;
+    }
+
+    .accred-container,
+    .accred-inner {
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
