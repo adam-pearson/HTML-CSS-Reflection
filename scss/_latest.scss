@@ -36,9 +36,6 @@
     display: flex;
     flex-wrap: wrap;
     @include padding-margin;
-    > * + * {
-        margin-top: 30px;
-    }
 }
 
 .img-container {

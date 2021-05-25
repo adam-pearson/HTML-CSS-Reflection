@@ -18,21 +18,12 @@
     padding: 0 20px;
     position: relative;
     &:hover {
-        img {
-            -webkit-filter: none;
-                    filter: none;
-        }
         .logo-description {
             display: block;
         }
     }
-    img {
-        -webkit-filter: grayscale(1);
-                filter: grayscale(1);
-        max-width: 100%;
-        height: auto;
-    }
 }
+
 
 .logo-description {
     display: none;

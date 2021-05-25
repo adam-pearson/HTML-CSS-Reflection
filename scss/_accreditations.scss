@@ -16,7 +16,6 @@
     img {
         height: auto;
         width: 100%;
-        vertical-align: middle;
     }
 }
 
@@ -40,11 +39,7 @@
 
 .accred-item {
     &:not(.google-partner) {
-        -webkit-filter: grayscale(1);
-                filter: grayscale(1);
         &:hover {
-            -webkit-filter: grayscale(0);
-                    filter: grayscale(0);
             opacity: 1;
         }
     }

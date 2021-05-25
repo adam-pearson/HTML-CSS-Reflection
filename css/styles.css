@@ -3,7 +3,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
+html, body {
   letter-spacing: .4px;
   overflow-x: hidden;
 }
@@ -19,6 +19,18 @@ body {
 
 button:focus {
   outline: none;
+}
+
+.colour {
+  display: none;
+}
+
+.item:hover .greyscale {
+  display: none;
+}
+
+.item:hover .colour {
+  display: inline;
 }
 
 #header-container {
@@ -590,6 +602,7 @@ button:focus {
   /*---------------------- positions cards -----------------------*/
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   /*------------ selects card content and stacks it -------------*/
   /*--------------------------------------------------------------*/
 }
@@ -815,10 +828,6 @@ button:focus {
   margin-right: auto;
 }
 
-.latest-cards > * + * {
-  margin-top: 30px;
-}
-
 .img-container {
   position: relative;
   overflow: hidden;
@@ -978,18 +987,8 @@ button:focus {
   position: relative;
 }
 
-.logo-item:hover img {
-  filter: none;
-}
-
 .logo-item:hover .logo-description {
   display: block;
-}
-
-.logo-item img {
-  filter: grayscale(1);
-  max-width: 100%;
-  height: auto;
 }
 
 .logo-description {
@@ -1310,7 +1309,6 @@ footer {
 .accred-row-2 img {
   height: auto;
   width: 100%;
-  vertical-align: middle;
 }
 
 .accred-row-1 .accred-item:first-child img {
@@ -1331,12 +1329,7 @@ footer {
   opacity: .5;
 }
 
-.accred-item:not(.google-partner) {
-  filter: grayscale(1);
-}
-
 .accred-item:not(.google-partner):hover {
-  filter: grayscale(0);
   opacity: 1;
 }
 
@@ -1346,6 +1339,9 @@ footer {
 @media screen and (max-width: 767px) {
   .md-search {
     display: none;
+  }
+  .latest-cards > * + * {
+    margin-top: 30px;
   }
 }
 
@@ -1452,7 +1448,7 @@ footer {
   .service-cards > .bespoke-software,
   .service-cards .it-support,
   .service-cards .digital-marketing {
-    flex: 1 30%;
+    flex: 1 1 30%;
   }
   .service-cards > .bespoke-software:not(:first-child),
   .service-cards .it-support:not(:first-child),

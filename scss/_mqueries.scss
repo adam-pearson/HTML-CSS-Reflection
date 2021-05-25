@@ -7,7 +7,14 @@
     .md-search {
         display: none;
     }
+    .latest-cards {
+        > * + * {
+            margin-top: 30px;
+        }
+    }
+
 }
+
 
 
 /* =======================================================
@@ -141,7 +148,7 @@
         > .bespoke-software,
         .it-support,
         .digital-marketing {
-            flex: 1 30%;
+            flex: 1 1 30%;
             &:not(:first-child) {
                 margin-left: 30px;
             }

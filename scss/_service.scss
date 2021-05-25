@@ -8,6 +8,7 @@
     /*---------------------- positions cards -----------------------*/
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     > * {
         min-height: 312px;
         margin-top: 30px;
