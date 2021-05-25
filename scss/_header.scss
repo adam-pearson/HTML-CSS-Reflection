@@ -1,0 +1,214 @@
+#header-container {
+    @include padding;
+    margin-bottom: 20px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100%;
+}
+
+.header-buttons {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+.call .fa-phone {
+    font-size: 1.75em;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: $primary-colour;
+}
+
+
+/*-------- large breakpoint (and up) header buttons -------*/
+
+.button {
+    &-support,
+    &-contact {
+        display: none;
+        height: 56px;
+        line-height: 46px;
+        font-size: 1.125rem;
+        margin-left: 20px;
+    }
+    &-support {
+        background-color: $blue;
+        &:hover {
+            background-color: #2a7ec6;
+        }
+    }
+    &-contact {
+        background-color: $button-grey;
+        &:hover {
+            background-color: #84858f;
+        }
+    }
+}
+
+
+/*----------- medium breakpoint (and up) search bar ------------*/
+
+.md-search {
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.md-search-bar {
+    display: inline-block;
+    width: 174px;
+    border-radius: 0px;
+    height: 56px;
+    border: 1px solid #e5e5e5;
+    margin-right: -5px;
+    padding: 5px 15px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
+    &::placeholder {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #555;
+    }
+    &:focus {
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08), 0 0 8px rgba(91, 192, 222, .6);
+    }
+}
+
+#md-search-submit {
+    margin: 0;
+    display: inline-block;
+    height: 56px;
+    background-color: #999aa2;
+    border-radius: 0 3px 3px 0;
+    width: 63px;
+    font-size: 23px;
+    vertical-align: bottom;
+    position: relative;
+    .fa-search {
+        position: absolute;
+        top: 17px;
+        left: 22px;
+    }
+    &:hover {
+        background-color: #7e808a;
+    }
+}
+
+
+
+/*--------------------- burger menu button ---------------------*/
+
+.burger-container {
+    background-color: $primary-colour;
+    color: $white;
+    border-radius: 3px;
+    height: 56px;
+    min-width: 63px;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 20px;
+    &:hover {
+        background-color: $primary-shade;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+.burger-box {
+    position: relative;
+    display: block;
+    width: 33px;
+    margin: 0 auto;
+}
+
+.burger-lines {
+    width: 33px;
+    height: 3px;
+    background-color: $white;
+    display: block;
+    position: absolute;
+    top: -9px;
+    &::before {
+        content: "";
+        width: 33px;
+        height: 3px;
+        display: block;
+        background-color: $white;
+        position: absolute;
+        top: 8px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        background-color: $white;
+        position: absolute;
+        top: 16px;
+    }
+}
+
+.burger-text {
+    display: block;
+    position: relative;
+    font-size: .75rem;
+    line-height: 1;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    top: 12px;
+    text-align: center;
+}
+
+
+/*---------------------- small search box ----------------------*/
+
+.s-search-box {
+    margin: 0 auto;
+}
+
+.s-search-box form {
+    display: flex;
+    position: relative;
+    font-size: .9em;
+}
+
+.s-search-box form input[type="text"] {
+    background-color: rgba(0,0,0,.1);
+    border: 2px solid rgba(0,0,0,.1);
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 15px;
+    height: 47px;
+}
+
+.search-submit  {
+    color: $primary-colour;
+    background: none;
+    position: absolute;
+    font-size: 20px;
+    height: 47px;
+    padding: 0 0;
+    width: 47px;
+    right: 2px;
+}
+
+.search-submit .fa-search {
+    position: absolute;
+    top: 15px;
+    right: 13px;
+
+}
