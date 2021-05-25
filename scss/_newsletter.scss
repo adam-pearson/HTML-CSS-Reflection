@@ -3,9 +3,7 @@
 }
 
 .newsletter-inner {
-    @include padding;
-    margin-left: auto;
-    margin-right: auto;
+    @include padding-margin;
 }
 
 .sign-up {
@@ -60,6 +58,7 @@
 
 
 /*------------------------- Checkbox --------------------------*/
+
 
 .marketing-check-content {
     display: table;
@@ -126,5 +125,8 @@
     background-color: $primary-colour;
     &:hover {
         background-color: $primary-shade;
+    }
+    &:focus {
+        outline: none;
     }
 }

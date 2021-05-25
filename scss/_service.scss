@@ -1,0 +1,166 @@
+#service-list {
+    display: flex;
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.service-cards {
+    /*---------------------- positions cards -----------------------*/
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+        min-height: 312px;
+        margin-top: 30px;
+        border-radius: 3px;
+        flex: 1 100%;
+        border: 1px solid $grey;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 35px 0px;
+        position: relative;
+    }
+
+    /*------------ selects card content and stacks it -------------*/
+    > * > * {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        padding: 30px;
+        height: 100%;
+    }
+    /*--------------------------------------------------------------*/
+
+    button {
+        text-transform: uppercase;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/*-------------------- styles card content ---------------------*/
+.service {
+    color: $primary-colour;
+    h2 {
+        font-size: 1.125rem;
+        padding-bottom: 17px;
+        margin: 0 0 11px;
+        font-weight: 400;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 28px;
+            height: 3px;
+            display: block;
+            background-color: $primary-colour;
+        }
+    }
+    p {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        margin-top: 0;
+        margin-bottom: 13px;
+        font-weight: 400;
+    }
+    .icon {
+        height: 60px;
+        width: 60px;
+        margin: 0 auto 17px;
+        border-radius: 50%;
+        line-height: 63px;
+        position: relative;
+        font-size: 1.2rem;
+        color: $white;
+    }
+}
+
+/*--------------------- card hover styles ----------------------*/
+.service:hover {
+    color: $white;
+    border-color: transparent;
+    .btn, .icon, h2:after {
+        background-color: $white;
+    }
+}
+
+.bespoke-software {
+    margin-top: 0;
+    .icon, .btn, &:hover {
+    background-color: $dark-blue;
+    }
+    &:hover {
+        .btn, .icon {
+            color: $dark-blue;
+        }
+    }
+}
+
+.it-support {
+    .icon, .btn, &:hover {
+    background-color: $blue;
+    }
+    &:hover {
+        .btn, .icon {
+            color: $blue;
+        }
+    }
+}
+
+.digital-marketing {
+    .icon, .btn, &:hover {
+    background-color: $green;
+    }
+    &:hover {
+        .btn, .icon {
+            color: $green;
+        }
+    }
+}
+
+.telecoms-services {
+    .icon, .btn, &:hover {
+    background-color: $red;
+    }
+    &:hover {
+        .btn, .icon {
+            color: $red;
+        }
+    }
+}
+
+.web-design {
+    .icon, .btn, &:hover {
+    background-color: $purple;
+    }
+    &:hover {
+        .btn, .icon {
+            color: $purple;
+        }
+    }
+}
+
+.cyber-security {
+    .icon, .btn, &:hover {
+    background-color: $pink;
+    }
+    &:hover {
+        .btn, .icon {
+            color: $pink;
+        }
+    }
+}
+
+.developer-training {
+    .icon, .btn, &:hover {
+    background-color: $purple;
+    }
+    &:hover {
+        .btn, .icon {
+            color: $purple;
+        }
+    }
+}

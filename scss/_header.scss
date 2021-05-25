@@ -1,6 +1,5 @@
 #header-container {
-    padding-left: 15px;
-    padding-right: 15px;
+    @include padding;
     margin-bottom: 20px;
 }
 
@@ -31,7 +30,84 @@
     color: $primary-colour;
 }
 
-/* -------------- burger menu button --------------*/
+
+/*-------- large breakpoint (and up) header buttons -------*/
+
+.button {
+    &-support,
+    &-contact {
+        display: none;
+        height: 56px;
+        line-height: 46px;
+        font-size: 1.125rem;
+        margin-left: 20px;
+    }
+    &-support {
+        background-color: $blue;
+        &:hover {
+            background-color: #2a7ec6;
+        }
+    }
+    &-contact {
+        background-color: $button-grey;
+        &:hover {
+            background-color: #84858f;
+        }
+    }
+}
+
+
+/*----------- medium breakpoint (and up) search bar ------------*/
+
+.md-search {
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.md-search-bar {
+    display: inline-block;
+    width: 174px;
+    border-radius: 0px;
+    height: 56px;
+    border: 1px solid #e5e5e5;
+    margin-right: -5px;
+    padding: 5px 15px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
+    &::placeholder {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #555;
+    }
+    &:focus {
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08), 0 0 8px rgba(91, 192, 222, .6);
+    }
+}
+
+#md-search-submit {
+    margin: 0;
+    display: inline-block;
+    height: 56px;
+    background-color: #999aa2;
+    border-radius: 0 3px 3px 0;
+    width: 63px;
+    font-size: 23px;
+    vertical-align: bottom;
+    position: relative;
+    .fa-search {
+        position: absolute;
+        top: 17px;
+        left: 22px;
+    }
+    &:hover {
+        background-color: #7e808a;
+    }
+}
+
+
+
+/*--------------------- burger menu button ---------------------*/
 
 .burger-container {
     background-color: $primary-colour;
@@ -97,7 +173,8 @@
     text-align: center;
 }
 
-/* ---------------- search box ----------------*/
+
+/*---------------------- small search box ----------------------*/
 
 .s-search-box {
     margin: 0 auto;

@@ -31,7 +31,7 @@
 }
 
 .hero-content {
-    @include padding;
+    @include padding-margin;
 }
 
 .hero-content h1, .hero-content p {

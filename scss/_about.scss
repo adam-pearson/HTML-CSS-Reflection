@@ -6,7 +6,7 @@
 }
 
 .about {
-    @include padding;
+    @include padding-margin;
     p {
         margin-bottom: 25px;
         line-height: 1.875rem;

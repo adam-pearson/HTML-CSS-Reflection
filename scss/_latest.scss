@@ -35,7 +35,7 @@
 .latest-cards {
     display: flex;
     flex-wrap: wrap;
-    @include padding;
+    @include padding-margin;
     > * + * {
         margin-top: 30px;
     }
@@ -133,42 +133,36 @@
 
 .latest-card {
     &-1 {
-        .latest-category {
-            background-color: $blue;
-        }
+        .latest-category, 
         .latest-button {
             background-color: $blue;
-            &:hover {
-                background-color: $blue-2;
-            }
+        }
+        .latest-button:hover {
+            background-color: $blue-2;
         }
         h3 {
             color: $blue;
         }
     }
     &-2 {
-        .latest-category {
-            background-color: $purple;
-        }
+        .latest-category,
         .latest-button {
             background-color: $purple;
-            &:hover {
+        }
+        .latest-button:hover {
                 background-color: $purple-2;
-            }
         }
         h3 {
             color: $purple;
         }
     }
     &-3 {
-        .latest-category {
-            background-color: $red;
-        }
+        .latest-category,
         .latest-button {
             background-color: $red;
-            &:hover {
+        }
+        .latest-button:hover {
                 background-color: $red-2;
-            }
         }
         h3 {
             color: $red;

@@ -1,0 +1,217 @@
+#nav-container {
+    background-color: $primary-colour;
+    display: none;
+}
+
+.nav-inner {
+    @include container-lg;
+    @include padding-margin;
+    > ul {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid hsla(0, 0%, 100%, .1);
+        border-right: 1px solid rgba(0, 0, 0, .25);
+    }
+}
+
+
+.nav-flex > li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid hsla(0, 0%, 100%, .1);
+    border-left: 1px solid rgba(0, 0, 0, .25);
+    > a {
+        position: relative;
+        display: block;
+        color: $white;
+        padding: 19px 0 18px;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        line-height: 1;
+        i {
+            font-size: 1.2rem;
+            display: block;
+            padding-bottom: 12px;
+        }
+        small {
+            display: block;
+            font-size: .625rem;
+            padding-bottom: 2px;
+        }
+    }
+}
+
+.web {
+    i {
+        color: $purple;
+    }
+    &:hover {
+        background-color: $purple;
+        i {
+            color: $white;
+        }
+    }
+    .web-menu {
+        background-color: $purple-2;
+        &::before, &::after {
+            background-color: $purple-2;
+        }
+    }
+    &:hover .web-menu {
+        display: block;
+    }
+}
+
+.it {
+    i {
+        color: $blue;
+    }
+    &:hover {
+        background-color: $blue;
+        i {
+            color: $white;
+        }
+    }
+    .it-menu {
+        background-color: $blue-2;
+        &::before, &::after {
+            background-color: $blue-2;
+        }
+    }
+    &:hover .it-menu {
+        display: block;
+    }
+}
+
+.telecoms {
+    i {
+        color: $red;
+    }
+    &:hover {
+        background-color: $red;
+        i {
+            color: $white;
+        }
+    }
+    .telecoms-menu {
+        background-color: $red-2;
+        &::before, &::after {
+            background-color: $red-2;
+        }
+    }
+    &:hover .telecoms-menu {
+        display: block;
+    }
+}
+
+.software {
+    i {
+        color: $dark-blue;
+    }
+    &:hover {
+        background-color: $dark-blue;
+        i {
+            color: $white;
+        }
+    }
+    .software-menu {
+        background-color: $dark-blue-2;
+        &::before, &::after {
+            background-color: $dark-blue-2;
+        }
+    }
+    &:hover .software-menu {
+        display: block;
+    }
+}
+
+.digital {
+    i {
+        color: $green;
+    }
+    &:hover {
+        background-color: $green;
+        i {
+            color: $white;
+        }
+    }
+    .digital-menu {
+        background-color: $green-2;
+        &::before, &::after {
+            background-color: $green-2;
+        }
+    }
+    &:hover .digital-menu {
+        display: block;
+    }
+}
+
+.security {
+    i {
+        color: $pink;
+    }
+    &:hover {
+        background-color: $pink;
+        i {
+            color: $white;
+        }
+    }
+    .security-menu {
+        background-color: $pink-2;
+        &::before, &::after {
+            background-color: $pink-2;
+        }
+    }
+    &:hover .security-menu {
+        display: block;
+    }
+}
+
+.nav-submenu {
+    padding: 0 15px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    z-index: 10;
+    list-style: none;
+    li {
+        float: left;
+        font-size: .8125rem;
+        text-transform: uppercase;
+        line-height: 2.813rem;
+        &:not(:first-child) {
+            padding-left: 20px;
+        }
+        &:not(:last-child)::after {
+            content: "-";
+            padding-left: 20px;
+            color: $white;
+        }
+    }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 2000px;
+        background-color: $purple-2;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 2000px;
+        background-color: $purple-2;
+    }
+}
