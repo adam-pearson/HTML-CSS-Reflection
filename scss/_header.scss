@@ -73,31 +73,32 @@
     margin-right: -5px;
     padding: 5px 15px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
+    &::placeholder {
+        font-size: 14px;
+        line-height: 42px;
+        color: #555;
+    }
     &::-webkit-input-placeholder {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 42px;
         color: #555;
     }
     &::-moz-placeholder {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 42px;
         color: #555;
     }
     &:-ms-input-placeholder {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 42px;
         color: #555;
     }
     &::-ms-input-placeholder {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 42px;
         color: #555;
     }
-    &::placeholder {
-        font-size: 14px;
-        line-height: 1.4;
-        color: #555;
-    }
+
     &:focus {
         border-color: #5bc0de;
         outline: 0;
