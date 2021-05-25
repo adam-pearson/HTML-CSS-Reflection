@@ -19,14 +19,16 @@
     position: relative;
     &:hover {
         img {
-            filter: none;
+            -webkit-filter: none;
+                    filter: none;
         }
         .logo-description {
             display: block;
         }
     }
     img {
-        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+                filter: grayscale(1);
         max-width: 100%;
         height: auto;
     }
