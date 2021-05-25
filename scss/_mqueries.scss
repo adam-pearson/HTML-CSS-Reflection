@@ -1,10 +1,26 @@
+/* =======================================================
+---------------- small breakpoint styles ----------------
+========================================================== */
+
+
 @media screen and (max-width: 767px) {
     .md-search {
         display: none;
     }
 }
 
+
+/* =======================================================
+---------------- medium breakpoint styles ----------------
+========================================================== */
+
+
 @media screen and (min-width: 768px) {
+
+    .width-margin {
+        @include container-md;
+    }
+
     .s-search-box,
     .phone-container {
         display: none;
@@ -12,22 +28,6 @@
 
     .logo-container {
         max-width: 50%;
-    }
-
-    #header-container {
-        width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-content {
-        width: 750px;
-    }
-
-    #service-list {
-        width: 750px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .service-cards {
@@ -41,22 +41,6 @@
             margin-left: 30px;
         }
     }   
-
-    .about {
-        width: 750px;
-    }
-
-    .latest-top {
-        width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .latest-cards-container {
-        width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     .latest-cards {
         flex-direction: row;
@@ -87,19 +71,11 @@
         }
     }
 
-    .newsletter-inner {
-        width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     #logo-section {
         display: block;
     }
 
     .footer-flex {
-        width: 750px;
-        margin: auto;
         display: flex;
         flex-wrap: wrap;
         * {
@@ -117,40 +93,47 @@
 }
 
 
+/* =======================================================
+---------------- large breakpoint styles ----------------
+========================================================== */
+
+
 @media screen and (min-width: 992px) {
+
+    .width-margin,
+    .hero-content {
+        @include container-lg;
+    }
+
     #header-container {
-        width: 970px;
         input {
             display: none;
         }
     }
+
     #md-search-submit {
         border-radius: 3px;
     }
+
     .button-support,
     .button-contact,
     #nav-container {
         display: block;
     }
+
     .hero-slider {
         text-align: left;
     }
-    .hero-content {
-        width: 970px;
-        @include padding;
-    }
+
     .hero-image {
         height: 490px;
         img {
             opacity: 1;
         }
     }
+
     .hero-image img {
         height: 490px;
-    }
-    
-    #service-list {
-        width: 970px;
     }
 
     .service-cards {
@@ -164,6 +147,7 @@
             }
         }
     }
+
     .bespoke-software {
         margin-top: 30px;
     }
@@ -179,27 +163,6 @@
         background-size: auto 100%;
     }
 
-    .about {
-        width: 970px;
-    }
-
-    .latest-top {
-        width: 970px;
-    }
-
-    .latest-cards-container {
-        width: 970px;
-
-    }
-
-    .logos-container {
-        width: 970px;
-    }
-
-    .newsletter-inner {
-        width: 970px;
-    }
-
     .sign-up-input {
         flex: 1 1 450px;
         flex-basis: 46.591%;
@@ -209,20 +172,24 @@
     }
 
     .footer-flex {
-        width: 970px;
-    }
-
-    .accred-container,
-    .accred-inner {
-        width: 970px;
-        margin-left: auto;
-        margin-right: auto;
+        width: $lg-width;
     }
 }
 
+
+/* =======================================================
+---------------- large breakpoint styles ----------------
+========================================================== */
+
+
 @media screen and (min-width: 1260px) {
+
+    .width-margin {
+        @include container-xl;
+    }
+
+
     #header-container {
-        width: 1200px;
         input {
             display: inline-block;
             width: 240px;
@@ -230,7 +197,6 @@
     }
 
     .nav-inner {
-        width: 1200px;
         .nav-submenu a {
             font-size: 1rem;
         }
@@ -244,26 +210,16 @@
         }
     }
     
-    .hero-slider-container {
-        height: 746px;
-    }
-    .hero-content-container {
+    .hero-slider-container,
+    .hero-content-container,
+    .hero-image img {
         height: 746px;
     }
 
     .hero-image {
         height: 100%;
     }
-    .hero-image img  {
-        height: 746px;
-    }
 
-    .hero-content {
-        width: 1200px;
-    }
-    #service-list {
-        width: 1200px;
-    }
     .service-cards {
         > *:nth-child(n+4) {
             flex-basis: 20%;
@@ -272,45 +228,28 @@
             }
         }
     }
+
     .about {
-        width: 1200px;
         &-inner {
             width: 50%;
         }
     }
-    .latest-top {
-        width: 1200px;
-    }
 
-    .latest-cards-container {
-        width: 1200px;
-        .latest-card-3 {
-            display: block;
-            margin-left: 30px;
-        }
-    }
-
-    .logos-container {
-        width: 1200px;
+    .latest-card-3 {
+        display: block;
+        margin-left: 30px;
     }
 
     .newsletter-inner {
-        width: 1200px;
         padding: 0;
     }
 
     .footer-flex {
-        width: 1200px;
         * {
             flex: 25%;
         }
     }
-    .accred-container {
-        width: 1200px;
-    }
-    .accred-inner {
-        width: 1200px;
-    }
+
     .accred-row-1 img,
     .accred-row-2 img {
         width: unset;
