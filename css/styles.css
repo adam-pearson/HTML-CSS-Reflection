@@ -1452,8 +1452,7 @@ footer {
     background-size: auto 100%;
   }
   .sign-up-input {
-    flex: 1 1 450px;
-    flex-basis: 46.591%;
+    flex: 1 1;
   }
   .sign-up-input:last-child {
     padding-left: 30px;
@@ -1464,7 +1463,7 @@ footer {
 }
 
 /* =======================================================
----------------- large breakpoint styles ----------------
+-------------- extra large breakpoint styles -------------
 ========================================================== */
 @media screen and (min-width: 1260px) {
   .width-margin {
