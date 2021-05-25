@@ -213,6 +213,11 @@ body {
   height: 47px;
 }
 
+.s-search-box form input[type="text"]:focus {
+  box-shadow: 0 0 3px #fff;
+  outline: none;
+}
+
 .search-submit {
   color: #333645;
   background: none;

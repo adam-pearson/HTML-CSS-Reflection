@@ -193,6 +193,10 @@
     padding-right: 50px;
     padding-left: 15px;
     height: 47px;
+    &:focus {
+        box-shadow: 0 0 3px #fff;
+        outline: none;
+    }
 }
 
 .search-submit  {
