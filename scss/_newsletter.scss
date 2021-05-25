@@ -1,0 +1,130 @@
+#newsletter-container {
+    background-color: #ddd;
+}
+
+.newsletter-inner {
+    @include padding;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-up {
+    padding: 50px 30px;
+    h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.sign-up-input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sign-up-input {
+    flex: 1 1 450px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.newsletter label{
+    display: inline-block;
+    color: $primary-colour;
+    font-weight: 600;
+    margin-bottom: 5px;
+    &::after {
+        content: "*";
+        color: #d24d57;
+    }
+}
+
+.sign-up-field {
+    height: 47px;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.08);
+    border-color: #ccc;
+    padding: 5px 15px;
+    &:focus {
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.08), 0 0 8px rgba(91, 192, 222, .6);
+    }
+}
+
+
+/*------------------------- Checkbox --------------------------*/
+
+.marketing-check-content {
+    display: table;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: $primary-colour;
+}
+
+.checkmark {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: #ddd;
+    border-radius: 3px;
+    border: 3px solid $primary-colour;
+}
+
+.checkmark .fa-check {
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark .fa-check {
+    display: block;
+}
+
+.checkmark .fa-check {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: $white;
+}
+
+.checkbox-text {
+    display: block;
+    margin-top: 7px;
+    margin-left: 50px;
+    line-height: 32px;
+    cursor: pointer;
+    font-weight: 600;
+    color: $primary-colour;
+    margin-bottom: 15px;
+    a {
+        text-decoration: underline;
+    }
+    & a:visited {
+        color: $primary-colour;
+    }
+}
+
+/* Button */
+
+.btn-newsletter {
+    background-color: $primary-colour;
+    &:hover {
+        background-color: $primary-shade;
+    }
+}

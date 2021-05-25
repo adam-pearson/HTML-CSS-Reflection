@@ -1,0 +1,195 @@
+#service-list {
+    display: flex;
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+        min-height: 312px;
+        margin-top: 30px;
+        border-radius: 3px;
+        flex: 1 100%;
+        border: 1px solid $grey;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 35px 0px;
+        position: relative;
+    }
+
+    > * > * {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        padding: 30px;
+        height: 100%;
+    }
+
+    button {
+        text-transform: uppercase;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.service {
+    color: $primary-colour;
+    h2 {
+        font-size: 1.125rem;
+        padding-bottom: 17px;
+        margin: 0 0 11px;
+        font-weight: 400;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 28px;
+            height: 3px;
+            display: block;
+            background-color: $primary-colour;
+        }
+    }
+    p {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        margin-top: 0;
+        margin-bottom: 13px;
+        font-weight: 400;
+    }
+    .icon {
+        height: 60px;
+        width: 60px;
+        margin: 0 auto 17px;
+        border-radius: 50%;
+        line-height: 63px;
+        position: relative;
+        font-size: 1.2rem;
+        color: $white;
+    }
+}
+
+.service:hover {
+    color: $white;
+    border-color: transparent;
+    .btn {
+        background-color: $white;
+    }
+    .icon {
+        background-color: $white;
+    }
+    h2:after {
+        background-color: $white;
+    }
+}
+
+.bespoke-software {
+    margin-top: 0;
+    .icon, .btn {
+    background-color: $dark-blue;
+    }
+    &:hover {
+        background-color: $dark-blue;
+        .btn {
+            color: $dark-blue;
+        }
+        .icon {
+            color: $dark-blue;
+        }
+    }
+}
+
+.it-support {
+    .icon, .btn {
+    background-color: $blue;
+    }
+    &:hover {
+        background-color: $blue;
+        .btn {
+            color: $blue;
+        }
+        .icon {
+            color: $blue;
+        }
+    }
+}
+
+.digital-marketing {
+    .icon, .btn {
+    background-color: $green;
+    }
+    &:hover {
+        background-color: $green;
+        .btn {
+            color: $green;
+        }
+        .icon {
+            color: $green;
+        }
+    }
+}
+
+.telecoms-services {
+    .icon, .btn {
+    background-color: $red;
+    }
+    &:hover {
+        background-color: $red;
+        .btn {
+            color: $red;
+        }
+        .icon {
+            color: $red;
+        }
+    }
+}
+
+.web-design {
+    .icon, .btn {
+    background-color: $purple;
+    }
+    &:hover {
+        background-color: $purple;
+        .btn {
+            color: $purple;
+        }
+        .icon {
+            color: $purple;
+        }
+    }
+}
+
+.cyber-security {
+    .icon, .btn {
+    background-color: $pink;
+    }
+    &:hover {
+        background-color: $pink;
+        .btn {
+            color: $pink;
+        }
+        .icon {
+            color: $pink;
+        }
+    }
+}
+
+.developer-training {
+    .icon, .btn {
+    background-color: $purple;
+    }
+    &:hover {
+        background-color: $purple;
+        .btn {
+            color: $purple;
+        }
+        .icon {
+            color: $purple;
+        }
+    }
+}
