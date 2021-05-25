@@ -978,10 +978,10 @@ button:focus {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  justify-content: space-between;
 }
 
 .logo-item {
-  flex-grow: 1;
   vertical-align: middle;
   padding: 0 20px;
   position: relative;
@@ -989,6 +989,10 @@ button:focus {
 
 .logo-item:hover .logo-description {
   display: block;
+}
+
+.logo-item img {
+  width: 100%;
 }
 
 .logo-description {
@@ -1529,7 +1533,7 @@ footer {
   }
   .accred-row-1 img,
   .accred-row-2 img {
-    width: unset;
+    width: auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */

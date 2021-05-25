@@ -10,10 +10,10 @@
     display: flex;
     @include container-md;
     @include padding;
+    justify-content: space-between;
 }
 
 .logo-item {
-    flex-grow: 1;
     vertical-align: middle;
     padding: 0 20px;
     position: relative;
@@ -21,6 +21,9 @@
         .logo-description {
             display: block;
         }
+    }
+    img {
+        width: 100%;
     }
 }
 
