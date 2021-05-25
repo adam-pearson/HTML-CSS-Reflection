@@ -1142,6 +1142,7 @@ body {
 }
 
 .checkbox-text a {
+  color: #333645;
   text-decoration: underline;
 }
 

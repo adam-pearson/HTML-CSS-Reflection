@@ -112,6 +112,7 @@
     color: $primary-colour;
     margin-bottom: 15px;
     a {
+        color: $primary-colour;
         text-decoration: underline;
     }
     & a:visited {
