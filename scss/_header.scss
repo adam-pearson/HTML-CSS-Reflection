@@ -1,19 +1,19 @@
 #header-container {
     @include padding;
-    margin-bottom: 20px;
+    min-height: 110px;
+
 }
 
 .header-top {
     display: flex;
     align-items: center;
-    height: 56px;
-    margin-top: 26px;
-    margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .logo {
     max-width: 100%;
 }
+
 
 .header-buttons {
     display: flex;
@@ -73,6 +73,8 @@
     margin-right: -5px;
     padding: 5px 15px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
+    color: #555;
+    font-size: 14px;
     &::placeholder {
         font-size: 14px;
         line-height: 42px;
@@ -195,7 +197,10 @@
 /*---------------------- small search box ----------------------*/
 
 .s-search-box {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    padding-bottom: 20px;
 }
 
 .s-search-box form {
@@ -204,13 +209,14 @@
     font-size: .9em;
 }
 
-.s-search-box form input[type="text"] {
+.s-search-box form input {
     background-color: rgba(0,0,0,.1);
     border: 2px solid rgba(0,0,0,.1);
     width: 100%;
     padding-right: 50px;
     padding-left: 15px;
     height: 47px;
+    color: #555;
     &:focus {
         box-shadow: 0 0 3px #fff;
         outline: none;

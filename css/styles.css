@@ -36,15 +36,13 @@ button:focus {
 #header-container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 20px;
+  min-height: 110px;
 }
 
 .header-top {
   display: flex;
   align-items: center;
-  height: 56px;
-  margin-top: 26px;
-  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .logo {
@@ -105,6 +103,8 @@ button:focus {
   margin-right: -5px;
   padding: 5px 15px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  color: #555;
+  font-size: 14px;
 }
 
 .md-search-bar::placeholder {
@@ -231,7 +231,10 @@ button:focus {
 
 /*---------------------- small search box ----------------------*/
 .s-search-box {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+  padding-bottom: 20px;
 }
 
 .s-search-box form {
@@ -240,16 +243,17 @@ button:focus {
   font-size: .9em;
 }
 
-.s-search-box form input[type="text"] {
+.s-search-box form input {
   background-color: rgba(0, 0, 0, 0.1);
   border: 2px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   padding-right: 50px;
   padding-left: 15px;
   height: 47px;
+  color: #555;
 }
 
-.s-search-box form input[type="text"]:focus {
+.s-search-box form input:focus {
   box-shadow: 0 0 3px #fff;
   outline: none;
 }
@@ -1363,6 +1367,9 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+  .logo {
+    max-width: 345px;
+  }
   .s-search-box,
   .phone-container {
     display: none;
@@ -1430,6 +1437,9 @@ footer {
   }
   #header-container input {
     display: none;
+  }
+  .logo {
+    max-width: 370px;
   }
   #md-search-submit {
     border-radius: 3px;

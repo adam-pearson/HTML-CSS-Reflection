@@ -34,6 +34,10 @@
         @include container-md;
     }
 
+    .logo {
+        max-width: 345px;
+    }
+
     .s-search-box,
     .phone-container {
         display: none;
@@ -122,6 +126,10 @@
         input {
             display: none;
         }
+    }
+
+    .logo {
+        max-width: 370px;
     }
 
     #md-search-submit {
