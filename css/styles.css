@@ -1347,6 +1347,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 767px) and (-ms-high-contrast: none) {
+  .logo-container {
+    flex: 1 1 10%;
+  }
+}
+
 /* =======================================================
 ---------------- medium breakpoint styles ----------------
 ========================================================== */
