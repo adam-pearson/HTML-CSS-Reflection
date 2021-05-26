@@ -170,6 +170,12 @@
         background-size: auto 100%;
     }
 
+    /*--- Sets the hover state for images in the latest section */
+    .img-container:hover img {
+        transform: scale(1.1);
+        opacity: .75;
+    }   
+
     .sign-up-input {
         flex: 1 1;
         &:last-child {
