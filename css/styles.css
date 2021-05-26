@@ -1145,18 +1145,18 @@ button:focus {
   border: 3px solid #333645;
 }
 
-.checkmark .fa-check {
+.checkmark .check {
   display: none;
 }
 
-.checkbox-container input:checked ~ .checkmark .fa-check {
+.checkbox-container input:checked ~ .checkmark .check {
   display: block;
 }
 
-.checkmark .fa-check {
+.checkmark .check {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 1px;
+  left: 1px;
   color: #fff;
 }
 

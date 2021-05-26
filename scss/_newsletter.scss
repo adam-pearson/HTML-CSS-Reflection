@@ -87,18 +87,33 @@
     border: 3px solid $primary-colour;
 }
 
-.checkmark .fa-check {
+// .checkmark .fa-check {
+//     display: none;
+// }
+
+.checkmark .check {
     display: none;
 }
 
-.checkbox-container input:checked ~ .checkmark .fa-check {
+// .checkbox-container input:checked ~ .checkmark .fa-check {
+//     display: block;
+// }
+
+.checkbox-container input:checked ~ .checkmark .check {
     display: block;
 }
 
-.checkmark .fa-check {
+// .checkmark .fa-check {
+//     position: absolute;
+//     top: 5px;
+//     left: 5px;
+//     color: $white;
+// }
+
+.checkmark .check {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 1px;
+    left: 1px;
     color: $white;
 }
 
