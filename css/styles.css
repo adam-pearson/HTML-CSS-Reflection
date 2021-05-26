@@ -530,17 +530,24 @@ button:focus {
 }
 
 .hero-slider {
-  max-height: 531px;
   background-size: cover;
   position: relative;
   text-align: center;
 }
 
+.hero-image {
+  height: calc(100vh - 153px);
+}
+
 .hero-image > img {
   width: 100%;
-  height: 531px;
+  height: calc(100vh - 153px);
   object-fit: cover;
   opacity: .5;
+}
+
+.hero-content-container {
+  height: calc(100vh - 153px);
 }
 
 .hero-content-container {
@@ -563,7 +570,14 @@ button:focus {
   margin-right: auto;
 }
 
-.hero-content h1, .hero-content p {
+.hero-content h1 {
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin-bottom: 35px;
   color: #fff;
 }
 
@@ -572,12 +586,6 @@ button:focus {
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 25px;
-}
-
-.hero-content p {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
-  margin-bottom: 35px;
 }
 
 .hero-button {
@@ -1374,8 +1382,17 @@ footer {
   .phone-container {
     display: none;
   }
-  .logo-container {
-    max-width: 50%;
+  .hero-content-container {
+    height: calc(100vh - 110px);
+  }
+  .hero-slider {
+    height: calc(100vh - 110px);
+  }
+  .hero-image {
+    height: calc(100vh - 110px);
+  }
+  .hero-image img {
+    height: calc(100vh - 110px);
   }
   .service-cards > .telecoms-services,
   .service-cards .web-design,
@@ -1449,17 +1466,19 @@ footer {
   #nav-container {
     display: block;
   }
+  .hero-content-container {
+    height: calc(100vh - 209px);
+  }
   .hero-slider {
     text-align: left;
+    height: calc(100vh - 209px);
   }
   .hero-image {
-    height: 490px;
+    height: calc(100vh - 209px);
   }
   .hero-image img {
     opacity: 1;
-  }
-  .hero-image img {
-    height: 490px;
+    height: calc(100vh - 209px);
   }
   .service-cards {
     align-items: stretch;
@@ -1526,14 +1545,6 @@ footer {
   }
   .nav-submenu li:not(:first-child) {
     padding-left: 30px;
-  }
-  .hero-slider-container,
-  .hero-content-container,
-  .hero-image img {
-    height: 746px;
-  }
-  .hero-image {
-    height: 100%;
   }
   .service-cards > *:nth-child(n+4) {
     flex-basis: 20%;

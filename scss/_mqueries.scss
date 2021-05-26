@@ -43,8 +43,19 @@
         display: none;
     }
 
-    .logo-container {
-        max-width: 50%;
+    .hero-content-container {
+        height: calc(100vh - 110px);        
+    }
+
+    .hero-slider {
+        height: calc(100vh - 110px);
+    }
+
+    .hero-image {
+        height: calc(100vh - 110px);
+        img {
+            height: calc(100vh - 110px);
+        }
     }
 
     .service-cards {
@@ -142,19 +153,21 @@
         display: block;
     }
 
+    .hero-content-container {
+        height: calc(100vh - 209px);        
+    }
+
     .hero-slider {
         text-align: left;
+        height: calc(100vh - 209px);
     }
 
     .hero-image {
-        height: 490px;
+        height: calc(100vh - 209px);
         img {
             opacity: 1;
+            height: calc(100vh - 209px);
         }
-    }
-
-    .hero-image img {
-        height: 490px;
     }
 
     .service-cards {
@@ -239,16 +252,7 @@
             padding-left: 30px;
         }
     }
-    
-    .hero-slider-container,
-    .hero-content-container,
-    .hero-image img {
-        height: 746px;
-    }
 
-    .hero-image {
-        height: 100%;
-    }
 
     .service-cards {
         > *:nth-child(n+4) {

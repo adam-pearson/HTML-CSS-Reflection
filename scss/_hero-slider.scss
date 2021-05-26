@@ -4,19 +4,27 @@
 }
 
 .hero-slider {
-    max-height: 531px;
     background-size: cover;
     position: relative;
     text-align: center;
 }
 
+.hero-image {
+    height: calc(100vh - 153px);
+}
+
 .hero-image > img {
     width: 100%;
-    height: 531px;
+    height: calc(100vh - 153px);
     -o-object-fit: cover;
        object-fit: cover;
     opacity: .5;
 }
+
+.hero-content-container {
+    height: calc(100vh - 153px);
+}
+
 
 .hero-content-container {
     background: linear-gradient(270deg, transparent 25%, #000);
@@ -33,10 +41,16 @@
 
 .hero-content {
     @include padding-margin;
-}
+    h1 {
+        color: $white;
+    }
+    p {
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+        margin-bottom: 35px;
+        color: $white;
+    }
 
-.hero-content h1, .hero-content p {
-    color: $white;
 }
 
 .hero-content h1 {
@@ -44,12 +58,6 @@
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 25px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    line-height: 2.25rem;
-    margin-bottom: 35px;
 }
 
 .hero-button {
