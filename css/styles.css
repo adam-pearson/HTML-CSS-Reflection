@@ -787,7 +787,7 @@ html, body {
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 28;
+  margin-bottom: 28px;
 }
 
 .about-button {
@@ -816,7 +816,7 @@ html, body {
 
 .latest {
   position: relative;
-  padding: 40px auto;
+  margin: 40px auto;
 }
 
 .latest::after {
