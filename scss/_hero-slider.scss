@@ -66,6 +66,8 @@
     font-size: 1.25rem;
     font-weight: 400;
     background-color: $purple;
+    color: $white;
+    display: inline-block;
     &:hover {
         background-color: $purple-2;
     }

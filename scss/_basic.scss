@@ -16,9 +16,12 @@ html, body {
     font-size: 1.063rem;
     line-height: 35px;
     padding: 5px 15px;
+    display: inline-block;
+    cursor: pointer;
+    color: $white;
 }
 
-button:focus {
+.btn:focus {
     outline: none;
 }
 
