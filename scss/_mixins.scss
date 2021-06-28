@@ -27,3 +27,61 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+
+
+
+
+@mixin push--auto {
+  margin: { 
+      left: auto;
+      right: auto;
+  }
+}
+
+@mixin media-xs {
+  @media (max-width: #{$xs-width}) {
+      @content;
+  }
+}
+
+@mixin media-sm {
+  @media (min-width: #{$sm-width}) {
+      @content;
+  }
+}
+
+@mixin media-md {
+  @media (min-width: #{$md-width}) {
+      @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: #{$lg-width}) {
+      @content;
+  }
+}
+
+@mixin media-xl {
+  @media (min-width: #{$xl-width}) {
+      @content;
+  }
+}
+
+
+@mixin media-xxl {
+@media (min-width: #{$xxl-width}) {
+    @content;
+}
+}
+
+/* IE-only media query */
+
+@mixin media-ie{
+  @media screen and (-ms-high-contrast: none) {
+      @content;
+  }
+}

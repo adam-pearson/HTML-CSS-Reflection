@@ -240,3 +240,39 @@
     right: 13px;
 
 }
+
+/* --------- Sticky -------- */
+
+
+#sticky.hide {
+	top: -150px;
+    @include media-sm {
+        top: -168px
+    }
+    @include media-md {
+        top: -110px;
+    }
+    @include media-lg {
+        top: -208px;
+    }
+}
+
+#sticky {
+    height: 150px;
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 900;
+    transition: .3s ease all;
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
+    @include media-sm {
+        height: 168px
+    }
+    @include media-md {
+        height: 110px;
+    }
+    @include media-lg {
+        height: 208px;
+    }
+}
