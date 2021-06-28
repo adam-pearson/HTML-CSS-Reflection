@@ -13,11 +13,11 @@
     }
 }
 
-.hero-slider {
-    background-size: cover;
-    position: relative;
-    text-align: center;
-}
+// .hero-slider1 {
+//     background-size: cover;
+//     position: relative;
+//     text-align: center;
+// }
 
 .hero-image {
     height: calc(100vh - 153px);
@@ -86,4 +86,16 @@
 
 .btn > .fa-arrow-right {
     margin-left: 8px;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 44px;
+    margin-top: 10px;
+    left: 0;
+    right: 0;
 }

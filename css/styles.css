@@ -290,13 +290,13 @@ html, body {
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 768px) {
   #sticky.hide {
     top: -110px;
   }
 }
 
-@media (min-width: 970px) {
+@media (min-width: 992px) {
   #sticky.hide {
     top: -208px;
   }
@@ -319,13 +319,13 @@ html, body {
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 768px) {
   #sticky {
     height: 110px;
   }
 }
 
-@media (min-width: 970px) {
+@media (min-width: 992px) {
   #sticky {
     height: 208px;
   }
@@ -337,7 +337,7 @@ html, body {
 }
 
 .nav-inner {
-  width: 970px;
+  width: 992px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -592,22 +592,16 @@ html, body {
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 768px) {
   .hero-slider-container {
     margin-top: 110px;
   }
 }
 
-@media (min-width: 970px) {
+@media (min-width: 992px) {
   .hero-slider-container {
     margin-top: 208px;
   }
-}
-
-.hero-slider {
-  background-size: cover;
-  position: relative;
-  text-align: center;
 }
 
 .hero-image {
@@ -679,6 +673,18 @@ html, body {
 
 .btn > .fa-arrow-right {
   margin-left: 8px;
+}
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 44px;
+  margin-top: 10px;
+  left: 0;
+  right: 0;
 }
 
 #service-list {
@@ -1060,7 +1066,7 @@ html, body {
 
 .logos-container {
   display: flex;
-  width: 750px;
+  width: 768px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -1380,7 +1386,7 @@ footer {
 }
 
 .accred-inner {
-  width: 750px;
+  width: 768px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -1448,7 +1454,7 @@ footer {
 ========================================================== */
 @media screen and (min-width: 768px) {
   .width-margin {
-    width: 750px;
+    width: 768px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1525,7 +1531,7 @@ footer {
 @media screen and (min-width: 992px) {
   .width-margin,
   .hero-content {
-    width: 970px;
+    width: 992px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1594,7 +1600,7 @@ footer {
     padding-left: 30px;
   }
   .footer-flex {
-    width: 970px;
+    width: 992px;
   }
 }
 

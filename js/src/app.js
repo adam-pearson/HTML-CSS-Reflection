@@ -11,7 +11,8 @@
     var prevDirection = 0;
   
     var header = document.getElementById('sticky');
-  
+    var headerBottom = header.offsetTop + header.offsetHeight;
+
     var checkScroll = function() {
   
       /*
@@ -53,3 +54,13 @@
 })();
 
 
+// owl carousel call
+
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    center: true,
+    autoWidth: true,
+    dots: true
+  });
+});
