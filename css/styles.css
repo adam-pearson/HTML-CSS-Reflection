@@ -708,13 +708,56 @@ button:focus {
   line-height: 50px;
   font-size: 1.25rem;
   font-weight: 400;
-  background-color: #926fb1;
   color: #fff;
   display: inline-block;
 }
 
-.hero-button:hover {
+.hero-button.hero-web-button {
+  background-color: #926fb1;
+}
+
+.hero-button.hero-web-button:hover {
   background-color: #79539a;
+}
+
+.hero-button.hero-it-button {
+  background-color: #4183d7;
+}
+
+.hero-button.hero-it-button:hover {
+  background-color: #286abd;
+}
+
+.hero-button.hero-telecoms-button {
+  background-color: #d64541;
+}
+
+.hero-button.hero-telecoms-button:hover {
+  background-color: #bc2c28;
+}
+
+.hero-button.hero-bespoke-button {
+  background-color: #67809f;
+}
+
+.hero-button.hero-bespoke-button:hover {
+  background-color: #526781;
+}
+
+.hero-button.hero-marketing-button {
+  background-color: #2ecc71;
+}
+
+.hero-button.hero-marketing-button:hover {
+  background-color: #25a25a;
+}
+
+.hero-button.hero-security-button {
+  background-color: #f62459;
+}
+
+.hero-button.hero-security-button:hover {
+  background-color: #de093f;
 }
 
 .btn > .fa-arrow-right {
