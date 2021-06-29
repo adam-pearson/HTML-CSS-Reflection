@@ -21,7 +21,8 @@ html, body {
   color: #fff;
 }
 
-.btn:focus {
+.btn:focus,
+button:focus {
   outline: none;
 }
 
@@ -601,6 +602,14 @@ html, body {
 @media (min-width: 992px) {
   .hero-slider-container {
     margin-top: 208px;
+    text-align: left;
+    height: calc(100vh - 209px);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-slider {
+    height: calc(100vh - 110px);
   }
 }
 
@@ -608,15 +617,36 @@ html, body {
   height: calc(100vh - 153px);
 }
 
-.hero-image > img {
+@media (min-width: 768px) {
+  .hero-image {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-image {
+    height: calc(100vh - 209px);
+  }
+}
+
+.hero-image img {
   width: 100%;
   height: calc(100vh - 153px);
   object-fit: cover;
   opacity: .5;
 }
 
-.hero-content-container {
-  height: calc(100vh - 153px);
+@media (min-width: 768px) {
+  .hero-image img {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-image img {
+    opacity: 1;
+    height: calc(100vh - 209px);
+  }
 }
 
 .hero-content-container {
@@ -630,6 +660,22 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  height: calc(100vh - 153px);
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  .hero-content-container {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-content-container {
+    height: calc(100vh - 209px);
+    text-align: left;
+  }
 }
 
 .hero-content {
@@ -685,6 +731,34 @@ html, body {
   margin-top: 10px;
   left: 0;
   right: 0;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 11px;
+  height: 11px;
+  margin: 0 10px;
+}
+
+.owl-theme .owl-dots .owl-dot span:hover {
+  background: #869791;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: #fff;
+  position: relative;
+}
+
+.owl-theme .owl-dots .owl-dot.active span::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-sizing: border-box;
 }
 
 #service-list {
@@ -1465,18 +1539,6 @@ footer {
   .phone-container {
     display: none;
   }
-  .hero-content-container {
-    height: calc(100vh - 110px);
-  }
-  .hero-slider {
-    height: calc(100vh - 110px);
-  }
-  .hero-image {
-    height: calc(100vh - 110px);
-  }
-  .hero-image img {
-    height: calc(100vh - 110px);
-  }
   .service-cards > .telecoms-services,
   .service-cards .web-design,
   .service-cards .cyber-security,
@@ -1548,20 +1610,6 @@ footer {
   .button-contact,
   #nav-container {
     display: block;
-  }
-  .hero-content-container {
-    height: calc(100vh - 209px);
-  }
-  .hero-slider {
-    text-align: left;
-    height: calc(100vh - 209px);
-  }
-  .hero-image {
-    height: calc(100vh - 209px);
-  }
-  .hero-image img {
-    opacity: 1;
-    height: calc(100vh - 209px);
   }
   .service-cards {
     align-items: stretch;

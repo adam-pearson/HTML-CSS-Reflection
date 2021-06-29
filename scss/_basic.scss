@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
@@ -21,9 +21,12 @@ html, body {
     color: $white;
 }
 
-.btn:focus {
+.btn:focus,
+button:focus {
     outline: none;
 }
+
+
 
 
 .colour {
