@@ -112,3 +112,16 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
 }
 
 
+// side menu
+
+var menu = document.getElementById('burger-menu');
+var lines = document.getElementById('burger-anim');
+
+menu.addEventListener('click', function(e) {
+  if (lines.classList.contains('is-active')) {
+    lines.classList.remove('is-active');
+  } else {
+    lines.classList.add('is-active');
+  }
+  
+});
