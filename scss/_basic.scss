@@ -5,7 +5,11 @@
 
 html, body {
     letter-spacing: .4px;
-    overflow-x: hidden;
+}
+
+.fixed-position {
+    overflow: hidden;
+    height: 100%;
 }
 
 /* Button */

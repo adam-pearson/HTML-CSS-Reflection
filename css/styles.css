@@ -6,7 +6,11 @@
 
 html, body {
   letter-spacing: .4px;
-  overflow-x: hidden;
+}
+
+.fixed-position {
+  overflow: hidden;
+  height: 100%;
 }
 
 /* Button */
@@ -36,6 +40,113 @@ button:focus {
 
 .item:hover .colour {
   display: inline;
+}
+
+#cookie-container {
+  display: none;
+}
+
+#cookie-container.shown {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.cookie-inner {
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  transition: transform .3s ease-out;
+  color: #666;
+  margin: auto;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .cookie-inner {
+    width: 600px;
+    transform: translateY(20%);
+  }
+}
+
+.cookie-inner .popup-header {
+  padding: 15px 20px;
+  min-height: 16.5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cookie-inner .popup-header h3 {
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: #333645;
+  line-height: 1.42857143;
+  margin: 0;
+}
+
+.cookie-inner .popup-body {
+  padding: 20px;
+  line-height: 1.875rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cookie-inner .popup-body p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.cookie-inner .popup-body p:last-of-type {
+  margin: 0;
+}
+
+.cookie-inner .popup-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.cookie-inner .popup-buttons button:first-of-type {
+  margin-bottom: 30px;
+  background-color: #999aa2;
+}
+
+.cookie-inner .popup-buttons button:first-of-type:hover {
+  background-color: #84858f;
+}
+
+@media (min-width: 768px) {
+  .cookie-inner .popup-buttons button:first-of-type {
+    width: 50%;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}
+
+.cookie-inner .popup-buttons button:last-of-type {
+  background-color: #926fb1;
+}
+
+.cookie-inner .popup-buttons button:last-of-type:hover {
+  background-color: #79539a;
+}
+
+@media (min-width: 768px) {
+  .cookie-inner .popup-buttons button:last-of-type {
+    width: 50%;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cookie-inner .popup-buttons {
+    flex-direction: row;
+  }
 }
 
 #header-container {
@@ -211,6 +322,8 @@ button:focus {
   background-color: #fff;
   position: absolute;
   top: 8px;
+  transform-origin: left center;
+  transform: rotate(45deg);
 }
 
 .burger-lines::after {
@@ -221,6 +334,8 @@ button:focus {
   background-color: #fff;
   position: absolute;
   top: 16px;
+  transform-origin: left center;
+  transform: rotate(-45deg);
 }
 
 .burger-text {

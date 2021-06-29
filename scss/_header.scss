@@ -170,6 +170,8 @@
         background-color: $white;
         position: absolute;
         top: 8px;
+        transform-origin: left center;
+        transform: rotate(45deg);
     }
     &::after {
         content: "";
@@ -179,6 +181,8 @@
         background-color: $white;
         position: absolute;
         top: 16px;
+        transform-origin: left center;
+        transform: rotate(-45deg);
     }
 }
 
