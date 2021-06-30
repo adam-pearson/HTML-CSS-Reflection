@@ -5,10 +5,13 @@
 
 html, body {
     letter-spacing: .4px;
+    background-color: $white;
+    overflow-y: hidden;
 }
 
 .fixed-position {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     height: 100%;
 }
 
@@ -30,7 +33,9 @@ button:focus {
     outline: none;
 }
 
-
+#page-container {
+    z-index: -1;
+}
 
 
 .colour {

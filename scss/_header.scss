@@ -163,6 +163,7 @@
     background-color: $white;
     width: 33px;
     height: 3px;
+    top: 60%;
     &:after {
         border-radius: 0;
         background-color: $white;
@@ -254,7 +255,6 @@
 
 
 #sticky.hide {
-	top: -150px;
     @include media-sm {
         top: -168px
     }
@@ -266,14 +266,38 @@
     }
 }
 
+#sticky.shown {
+    position: fixed;
+}
+
 #sticky {
     height: 150px;
     background-color: $white;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
-    z-index: 900;
-    transition: .3s ease all;
+    z-index: 9;
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
+    @include media-sm {
+        height: 168px
+    }
+    @include media-md {
+        height: 110px;
+    }
+    @include media-lg {
+        height: 208px;
+    }
+}
+
+
+#sticky-header {
+    height: 150px;
+    background-color: $white;
+    position: absolute;
+    display: none;
+    top: 0;
+    width: 100%;
+    z-index: 9;
     box-shadow: 0 5px 35px rgba(0,0,0,.1);
     @include media-sm {
         height: 168px

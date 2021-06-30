@@ -6,10 +6,13 @@
 
 html, body {
   letter-spacing: .4px;
+  background-color: #fff;
+  overflow-y: hidden;
 }
 
 .fixed-position {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   height: 100%;
 }
 
@@ -28,6 +31,10 @@ html, body {
 .btn:focus,
 button:focus {
   outline: none;
+}
+
+#page-container {
+  z-index: -1;
 }
 
 .colour {
@@ -147,6 +154,58 @@ button:focus {
   .cookie-inner .popup-buttons {
     flex-direction: row;
   }
+}
+
+#scroll-container {
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+  background: #fff;
+}
+
+#scroll-container.sidebar-shown {
+  height: 100vh;
+  right: 275px;
+}
+
+#main {
+  overflow-y: hidden;
+  z-index: 10;
+}
+
+#sidebar-overlay {
+  display: none;
+}
+
+#sidebar-overlay.shown {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  right: 275px;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -275px;
+  width: 275px;
+  height: 100%;
+  z-index: 100;
+  background-color: #333645;
+  overflow: auto;
+  transition: .3s ease all;
+}
+
+#sidebar.shown {
+  right: 0;
+  display: block;
 }
 
 #header-container {
@@ -314,6 +373,7 @@ button:focus {
   background-color: #fff;
   width: 33px;
   height: 3px;
+  top: 60%;
 }
 
 .hamburger-inner:after {
@@ -404,10 +464,6 @@ button:focus {
 }
 
 /* --------- Sticky -------- */
-#sticky.hide {
-  top: -150px;
-}
-
 @media (min-width: 576px) {
   #sticky.hide {
     top: -168px;
@@ -426,14 +482,17 @@ button:focus {
   }
 }
 
+#sticky.shown {
+  position: fixed;
+}
+
 #sticky {
   height: 150px;
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
-  z-index: 900;
-  transition: .3s ease all;
+  z-index: 9;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
 
@@ -451,6 +510,35 @@ button:focus {
 
 @media (min-width: 992px) {
   #sticky {
+    height: 208px;
+  }
+}
+
+#sticky-header {
+  height: 150px;
+  background-color: #fff;
+  position: absolute;
+  display: none;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 576px) {
+  #sticky-header {
+    height: 168px;
+  }
+}
+
+@media (min-width: 768px) {
+  #sticky-header {
+    height: 110px;
+  }
+}
+
+@media (min-width: 992px) {
+  #sticky-header {
     height: 208px;
   }
 }
@@ -931,6 +1019,7 @@ button:focus {
   display: flex;
   text-align: center;
   padding: 50px 15px;
+  background-color: #fff;
 }
 
 .service-cards {
@@ -1120,7 +1209,8 @@ button:focus {
 }
 
 .latest-top-container {
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
 }
 
 .latest-top {
@@ -1151,6 +1241,7 @@ button:focus {
 .latest-cards-container {
   padding-top: 50px;
   padding-bottom: 50px;
+  background-color: #fff;
 }
 
 .latest-cards {
