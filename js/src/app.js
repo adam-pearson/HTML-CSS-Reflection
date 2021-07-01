@@ -1,75 +1,39 @@
-// //sticky header - https://codingreflections.com/hide-header-on-scroll-down/
-
-// (function(){
-
-//     var doc = document.documentElement;
-//     var w = window;
-  
-//     var prevScroll = w.scrollY || doc.scrollTop;
-//     var curScroll;
-//     var direction = 0;
-//     var prevDirection = 0;
-  
-//     var header = document.getElementById('sticky');
-//     var headerBottom = header.offsetTop + header.offsetHeight;
-
-//     var checkScroll = function() {
-  
-//       /*
-//       ** Find the direction of scroll
-//       ** 0 - initial, 1 - up, 2 - down
-//       */
-  
-//       curScroll = w.scrollY || doc.scrollTop;
-//       if (curScroll > prevScroll) { 
-//         //scrolled up
-//         direction = 2;
-//       }
-//       else if (curScroll < prevScroll) { 
-//         //scrolled down
-//         direction = 1;
-//       }
-  
-//       if (direction !== prevDirection) {
-//         toggleHeader(direction, curScroll);
-//       }
-      
-//       prevScroll = curScroll;
-//     };
-  
-//     var toggleHeader = function(direction, curScroll) {
-//       if (direction === 2 && curScroll > 208) { 
-          
-//         header.classList.add('hide');
-//         header.classList.remove('shown');
-//         prevDirection = direction;
-//       }
-//       else if (direction === 1) {
-//         header.classList.remove('hide');
-//         header.classList.add('shown');
-//         prevDirection = direction;
-//       }
-//     };
-    
-//     document.addEventListener('scroll', checkScroll);
-// })();
+var menu = document.getElementById('burger-menu');
+var lines = document.getElementById('burger-anim');
+var mainContainer = document.getElementById('main');
+var scrollContainer = document.getElementById('scroll-container');
+var pageContainer = document.getElementById('page-container');
+var sidebarOverlay = document.getElementById('sidebar-overlay');
+var sidebar = document.getElementById('sidebar');
+var scrollBarWidth = scrollContainer.offsetWidth - scrollContainer.clientWidth;
 
 
-// $('#scroll-container').on('scroll',function(event){
-//   $('#sticky').css({top: $(this).scrollTop()});
-// });
+/*  find the scrollbar width, set 
+    header width to page width minus scrollbar width.
+    if Mozernizr detects a hidden scrollbar, sets width to 100%
+ */
+
+if (Modernizr.hiddenscroll === true) {
+  $('#sticky-top').css("width", "100%");
+} else {
+  $('#sticky-top').css("width", scrollContainer.offsetWidth - scrollBarWidth);
+}
+
+$( window ).resize(function() {
+  $('#sticky-top').css("width", scrollContainer.offsetWidth - scrollBarWidth);
+});
+
+console.log(Modernizr.hiddenscroll);
+
 
 var lastScrollTop = 0;
-
-$('#sticky-header').css({top: $(this).scrollTop()});
 
 $('#scroll-container').scroll(function(event){
    var st = $(this).scrollTop();
    if (st > lastScrollTop){
-    $('#sticky-header').slideUp(150);
+    $('#sticky-top').slideUp(150);
    } else {
-    
-    $('#sticky-header').slideDown(150);
+    $('#sticky-top').slideDown(300);
    }
    lastScrollTop = st;
 });

@@ -290,11 +290,10 @@
 }
 
 
-#sticky-header {
+#sticky-top {
     height: 150px;
     background-color: $white;
-    position: absolute;
-    display: none;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 9;
@@ -309,3 +308,4 @@
         height: 208px;
     }
 }
+

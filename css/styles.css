@@ -514,11 +514,10 @@ button:focus {
   }
 }
 
-#sticky-header {
+#sticky-top {
   height: 150px;
   background-color: #fff;
-  position: absolute;
-  display: none;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 9;
@@ -526,19 +525,19 @@ button:focus {
 }
 
 @media (min-width: 576px) {
-  #sticky-header {
+  #sticky-top {
     height: 168px;
   }
 }
 
 @media (min-width: 768px) {
-  #sticky-header {
+  #sticky-top {
     height: 110px;
   }
 }
 
 @media (min-width: 992px) {
-  #sticky-header {
+  #sticky-top {
     height: 208px;
   }
 }
@@ -1241,7 +1240,6 @@ button:focus {
 .latest-cards-container {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #fff;
 }
 
 .latest-cards {
