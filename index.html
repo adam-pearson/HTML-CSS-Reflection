@@ -51,7 +51,7 @@
                 <div id="sidebar-overlay"></div> 
                 <div id="main" class="pushed2">
                     <!-- header section -->
-                    <div id="sticky">
+                    <!-- <div id="sticky">
                         <div id="header-container" class="width-margin">
                         <div class="header-top">
                             <div class="logo-container">
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                         <!-- nav section -->
-                        <div id="nav-container">
+                        <!-- <div id="nav-container">
                             <div class="nav-inner width-margin">
                                 <ul class="nav-flex">
                                     <li class="web">
@@ -274,7 +274,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div id="sticky-top">
                         <div id="sticky-header-container" class="width-margin">
                         <div class="header-top">
@@ -333,16 +333,15 @@
                         <div id="sticky-nav-container">
                             <div class="nav-inner width-margin">
                                 <ul class="nav-flex">
-                                    <li class="web">
+                                    <li class="web main-menu">
                                         <a href="#">
                                             <i class="fas fa-code"></i>
                                             <small>Web</small>
                                             Design
                                         </a>
-                                        <ul class="nav-submenu web-menu">
+                                        <ul class="nav-sub web-menu">
                                             <li>
                                                 <a href="#">Stylish Websites</a>
-                                                <div id="web-background"></div>
                                             </li>
                                             <li>
                                                 <a href="#">Ecommerce Stores</a>
@@ -359,15 +358,16 @@
                                             <li>
                                                 <a href="#">Pay Monthly Websites</a>
                                             </li>
+                                            <div id="web-sub-bg" class="sub-bg"></div>
                                         </ul>
                                     </li>
-                                    <li class="it">
+                                    <li class="it main-menu">
                                         <a href="#">
                                             <i class="fas fa-desktop"></i>
                                             <small>IT</small>
                                             Support
                                         </a>
-                                        <ul class="nav-submenu it-menu">
+                                        <ul class="nav-sub it-menu">
                                             <li>
                                                 <a href="#">Managed IT</a>
                                             </li>
@@ -386,15 +386,16 @@
                                             <li>
                                                 <a href="#">Data Backup</a>
                                             </li>
+                                            <div id="it-sub-bg" class="sub-bg"></div>
                                         </ul>
                                     </li>
-                                    <li class="telecoms">
+                                    <li class="telecoms main-menu">
                                         <a href="#">
                                             <i class="fas fa-phone"></i>
                                             <small>Telecoms</small>
                                             Services
                                         </a>
-                                        <ul class="nav-submenu telecoms-menu">
+                                        <ul class="nav-sub telecoms-menu">
                                             <li>
                                                 <a href="#">Gigabit Voucher</a>
                                             </li>
@@ -413,15 +414,16 @@
                                             <li>
                                                 <a href="#">3CX Systems</a>
                                             </li>
+                                            <div id="telecoms-sub-bg" class="sub-bg"></div>
                                         </ul>
                                     </li>
-                                    <li class="software">
+                                    <li class="software main-menu">
                                         <a href="#">
                                             <i class="fas fa-grip-vertical"></i>
                                             <small>Bespoke</small>
                                             Software
                                         </a>
-                                        <ul class="nav-submenu software-menu">
+                                        <ul class="nav-sub software-menu">
                                             <li>
                                                 <a href="#">Workflow</a>
                                             </li>
@@ -440,15 +442,16 @@
                                             <li>
                                                 <a href="#">Business Management</a>
                                             </li>
+                                            <div id="software-sub-bg" class="sub-bg"></div>
                                         </ul>
                                     </li>
-                                    <li class="digital">
+                                    <li class="digital main-menu">
                                         <a href="#">
                                             <i class="fas fa-signal"></i>
                                             <small>Digital</small>
                                             Marketing
                                         </a>
-                                        <ul class="nav-submenu digital-menu">
+                                        <ul class="nav-sub digital-menu">
                                             <li>
                                                 <a href="#">Search (SEO)</a>
                                             </li>
@@ -467,15 +470,16 @@
                                             <li>
                                                 <a href="#">Content</a>
                                             </li>
+                                            <div id="marketing-sub-bg" class="sub-bg"></div>
                                         </ul>
                                     </li>
-                                    <li class="security">
+                                    <li class="security main-menu">
                                         <a href="#">
                                             <i class="fas fa-shield-alt"></i>
                                             <small>Cyber</small>
                                             Security
                                         </a>
-                                        <ul class="nav-submenu security-menu">
+                                        <ul class="nav-sub security-menu">
                                             <li>
                                                 <a href="#">Assessment</a>
                                             </li>
@@ -494,6 +498,7 @@
                                             <li>
                                                 <a href="#">Hacker Prevention</a>
                                             </li>
+                                            <div id="security-sub-bg" class="sub-bg"></div>
                                         </ul>
                                     </li>
                                 </ul>
@@ -1154,6 +1159,7 @@
         <!-- scripts -->
         <script src="https://kit.fontawesome.com/9d6ccdf40f.js" crossorigin="anonymous"></script>
         <script src="/node_modules/jquery/dist/jquery.js"></script>
+        <script src="js/dist/from-polyfill.js"></script>
         <script src="js/dist/modernizr-custom.js"></script>
         <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
         <script src="js/dist/object-fit-polyfill.js"></script>

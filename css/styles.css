@@ -220,7 +220,7 @@ button:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   #header-container input, #sticky-header-container input {
     display: inline-block;
     width: 240px;
@@ -572,6 +572,7 @@ button:focus {
 #nav-container, #sticky-nav-container {
   background-color: #333645;
   display: none;
+  height: 98px;
 }
 
 @media (min-width: 992px) {
@@ -630,6 +631,12 @@ button:focus {
   padding-bottom: 2px;
 }
 
+@media (min-width: 1260px) {
+  .nav-flex > li a {
+    font-size: 1rem;
+  }
+}
+
 .web i {
   color: #926fb1;
 }
@@ -664,14 +671,6 @@ button:focus {
 
 .it:hover i {
   color: #fff;
-}
-
-.it .it-menu {
-  background-color: #286abd;
-}
-
-.it .it-menu::before, .it .it-menu::after {
-  background-color: #286abd;
 }
 
 .it:hover .it-menu {
@@ -774,9 +773,9 @@ button:focus {
   display: block;
 }
 
-.nav-submenu {
+.nav-sub {
   padding: 0 15px;
-  display: block;
+  display: none;
   position: absolute;
   top: 100%;
   left: -15px;
@@ -785,32 +784,72 @@ button:focus {
   list-style: none;
 }
 
-.nav-submenu li {
+.nav-sub li {
   float: left;
   font-size: .8125rem;
   text-transform: uppercase;
   line-height: 2.813rem;
 }
 
-.nav-submenu li:not(:first-child) {
+.nav-sub li a {
+  line-height: 2.813rem;
+}
+
+.nav-sub li:not(:first-child) {
   padding-left: 20px;
 }
 
-.nav-submenu li:not(:last-child)::after {
+@media (min-width: 1260px) {
+  .nav-sub li:not(:first-child) {
+    padding-left: 30px;
+  }
+}
+
+.nav-sub li:not(:nth-last-child(2))::after {
   content: "-";
   padding-left: 20px;
   color: #fff;
 }
 
-#web-background {
-  width: 1500px;
+@media (min-width: 1260px) {
+  .nav-sub li:not(:nth-last-child(2))::after {
+    padding-left: 30px;
+  }
+}
+
+.sub-bg {
+  content: "";
+  display: block;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  height: 46px;
+  width: 2000px;
   z-index: -1;
-  display: block;
+}
+
+.sub-bg#web-sub-bg {
   background-color: #79539a;
+}
+
+.sub-bg#it-sub-bg {
+  background-color: #286abd;
+}
+
+.sub-bg#telecoms-sub-bg {
+  background-color: #bc2c28;
+}
+
+.sub-bg#software-sub-bg {
+  background-color: #526781;
+}
+
+.sub-bg#marketing-sub-bg {
+  background-color: #25a25a;
+}
+
+.sub-bg#security-sub-bg {
+  background-color: #de093f;
 }
 
 .hero-slider-container {
@@ -835,7 +874,7 @@ button:focus {
   .hero-slider-container {
     margin-top: 208px;
     text-align: left;
-    height: calc(100vh - 209px);
+    height: calc(100vh - 208px);
   }
 }
 
@@ -857,7 +896,7 @@ button:focus {
 
 @media (min-width: 992px) {
   .hero-image {
-    height: calc(100vh - 209px);
+    height: calc(100vh - 208px);
   }
 }
 
@@ -877,7 +916,7 @@ button:focus {
 @media (min-width: 992px) {
   .hero-image img {
     opacity: 1;
-    height: calc(100vh - 209px);
+    height: calc(100vh - 208px);
   }
 }
 
@@ -1920,7 +1959,7 @@ footer {
 ========================================================== */
 @media screen and (min-width: 1260px) {
   .width-margin {
-    width: 1200px;
+    width: 1260px;
     margin-left: auto;
     margin-right: auto;
   }

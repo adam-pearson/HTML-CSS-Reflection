@@ -4,6 +4,7 @@
     @include media-lg {
         display: block;
     }
+    height: 98px;
 }
 
 .nav-inner {
@@ -46,6 +47,11 @@
             padding-bottom: 2px;
         }
     }
+    @include media-xl {
+        a {
+            font-size: 1rem;
+        }
+    }
 }
 
 .web {
@@ -77,12 +83,6 @@
         background-color: $blue;
         i {
             color: $white;
-        }
-    }
-    .it-menu {
-        background-color: $blue-2;
-        &::before, &::after {
-            background-color: $blue-2;
         }
     }
     &:hover .it-menu {
@@ -174,9 +174,9 @@
     }
 }
 
-.nav-submenu {
+.nav-sub {
     padding: 0 15px;
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
     left: -15px;
@@ -188,13 +188,22 @@
         font-size: .8125rem;
         text-transform: uppercase;
         line-height: 2.813rem;
+        a {
+            line-height: 2.813rem;
+        }
         &:not(:first-child) {
             padding-left: 20px;
+            @include media-xl {
+                padding-left: 30px;
+            }
         }
-        &:not(:last-child)::after {
+        &:not(:nth-last-child(2))::after {
             content: "-";
             padding-left: 20px;
             color: $white;
+            @include media-xl {
+                padding-left: 30px;
+            }
         }
     }
     // &::before {
@@ -219,13 +228,31 @@
     // }
 }
 
-#web-background {
-    width: 1500px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 46px;
-    z-index: -1;
-    display: block;
-    background-color: $purple-2;
+.sub-bg {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 2000px;
+        z-index: -1;
+        &#web-sub-bg {
+            background-color: $purple-2;
+        }
+        &#it-sub-bg {
+            background-color: $blue-2;
+        }
+        &#telecoms-sub-bg {
+            background-color: $red-2;
+        }
+        &#software-sub-bg {
+            background-color: $dark-blue-2;
+        }
+        &#marketing-sub-bg {
+            background-color: $green-2;
+        }
+        &#security-sub-bg {
+            background-color: $pink-2;
+        }
 }

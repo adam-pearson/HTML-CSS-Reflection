@@ -11,7 +11,7 @@
     @include media-lg {
         margin-top: 208px;
         text-align: left;
-        height: calc(100vh - 209px);
+        height: calc(100vh - 208px);
     }
 }
 
@@ -30,7 +30,7 @@
         height: calc(100vh - 110px);
     }
     @include media-lg {
-        height: calc(100vh - 209px);
+        height: calc(100vh - 208px);
     }
     img {
         width: 100%;
@@ -42,7 +42,7 @@
         }
         @include media-lg {
             opacity: 1;
-            height: calc(100vh - 209px);
+            height: calc(100vh - 208px);
         }
     }
 }

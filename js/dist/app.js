@@ -95,26 +95,6 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
 } // side menu
 
 
-menu.addEventListener('click', function (e) {
-  if (!lines.classList.contains('is-active')) {
-    lines.classList.add('is-active');
-    scrollContainer.classList.add('sidebar-shown');
-    sidebarOverlay.classList.add('shown');
-    sidebar.classList.add('shown');
-  } else {
-    lines.classList.remove('is-active');
-    scrollContainer.classList.remove('sidebar-shown');
-    sidebar.classList.remove('shown');
-  }
-});
-sidebarOverlay.addEventListener('click', function (e) {
-  if (lines.classList.contains('is-active')) {
-    lines.classList.remove('is-active');
-    scrollContainer.classList.remove('sidebar-shown');
-    sidebarOverlay.classList.remove('shown');
-    sidebar.classList.remove('shown');
-  }
-});
 stickyMenu.addEventListener('click', function (e) {
   if (!stickyLines.classList.contains('is-active')) {
     stickyLines.classList.add('is-active');
@@ -124,6 +104,15 @@ stickyMenu.addEventListener('click', function (e) {
   } else {
     stickyLines.classList.remove('is-active');
     scrollContainer.classList.remove('sidebar-shown');
+    sidebarOverlay.classList.remove('shown');
+    sidebar.classList.remove('shown');
+  }
+});
+sidebarOverlay.addEventListener('click', function (e) {
+  if (stickyLines.classList.contains('is-active')) {
+    stickyLines.classList.remove('is-active');
+    scrollContainer.classList.remove('sidebar-shown');
+    sidebarOverlay.classList.remove('shown');
     sidebar.classList.remove('shown');
   }
 });
@@ -131,16 +120,45 @@ stickyMenu.addEventListener('click', function (e) {
 */
 
 function GetElementDistance(obj) {
-  var div = document.getElementById('web-background');
-  var topLen = div.getBoundingClientRect().top; // The distance (length) of div from the top of screen
+  var leftLen = obj.getBoundingClientRect().left; // The distance (length) of div from the left of screen
 
-  var bottomLen = div.getBoundingClientRect().bottom; // The distance (length) of div from the bottom of screen
+  var rightLen = obj.getBoundingClientRect().right; // The distance (length) of div from the right of screen
 
-  var leftLen = div.getBoundingClientRect().left; // The distance (length) of div from the left of screen
-
-  var rightLen = div.getBoundingClientRect().right; // The distance (length) of div from the right of screen
-
-  return "topLength=" + topLen + "; bottomLen=" + bottomLen + "; leftLen=" + leftLen + "; rightLen=" + rightLen;
+  return [leftLen, rightLen];
 }
 
-document.write(GetElementDistance("divId"));
+var mainMenu = document.getElementsByClassName('main-menu');
+var subMenu = document.getElementsByClassName('nav-sub');
+var subBg = document.getElementsByClassName('sub-bg');
+var childTest = document.getElementsByClassName('main-menu')[0].lastElementChild.lastElementChild; // (function showMenu() {
+//   var mainMenu = document.getElementsByClassName('main-menu');
+//   var subMenuBg = document.getElementsByClassName('sub-bg');
+//   for (var i = 0; i < mainMenu.length; i++) {
+//     mainMenu[i].addEventListener('mouseover', function(e) {
+//     });
+//     console.log(subMenuBg[i]);
+//   }
+// })();
+
+Array.from(mainMenu).forEach(function (mainMenu, index) {
+  mainMenu.addEventListener('mouseenter', function () {
+    var leftDistance = "-" + GetElementDistance(subBg[index])[0] + "px";
+
+    if (Modernizr.hiddenscroll === true) {
+      $('.sub-bg').css({
+        "width": scrollcontainer.offsetWidth,
+        "left": leftDistance
+      });
+    } else {
+      $('.sub-bg').css({
+        "width": scrollContainer.clientWidth,
+        "left": leftDistance
+      });
+    }
+  });
+  mainMenu.addEventListener('mouseleave', function () {
+    $('.sub-bg').css({
+      "left": "0px"
+    });
+  });
+});
