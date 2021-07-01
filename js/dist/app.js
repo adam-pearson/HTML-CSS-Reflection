@@ -2,6 +2,8 @@
 
 var menu = document.getElementById('burger-menu');
 var lines = document.getElementById('burger-anim');
+var stickyMenu = document.getElementById('sticky-burger-menu');
+var stickyLines = document.getElementById('sticky-burger-anim');
 var mainContainer = document.getElementById('main');
 var scrollContainer = document.getElementById('scroll-container');
 var pageContainer = document.getElementById('page-container');
@@ -22,7 +24,10 @@ if (Modernizr.hiddenscroll === true) {
 $(window).resize(function () {
   $('#sticky-top').css("width", scrollContainer.offsetWidth - scrollBarWidth);
 });
-console.log(Modernizr.hiddenscroll);
+/*  detects up or down scrolls, and hides/reveals
+    the header respectively
+ */
+
 var lastScrollTop = 0;
 $('#scroll-container').scroll(function (event) {
   var st = $(this).scrollTop();
@@ -30,7 +35,7 @@ $('#scroll-container').scroll(function (event) {
   if (st > lastScrollTop) {
     $('#sticky-top').slideUp(150);
   } else {
-    $('#sticky-top').slideDown(300);
+    $('#sticky-top').slideDown(150);
   }
 
   lastScrollTop = st;
@@ -90,13 +95,6 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
 } // side menu
 
 
-var menu = document.getElementById('burger-menu');
-var lines = document.getElementById('burger-anim');
-var mainContainer = document.getElementById('main');
-var scrollContainer = document.getElementById('scroll-container');
-var pageContainer = document.getElementById('page-container');
-var sidebarOverlay = document.getElementById('sidebar-overlay');
-var sidebar = document.getElementById('sidebar');
 menu.addEventListener('click', function (e) {
   if (!lines.classList.contains('is-active')) {
     lines.classList.add('is-active');
@@ -117,3 +115,32 @@ sidebarOverlay.addEventListener('click', function (e) {
     sidebar.classList.remove('shown');
   }
 });
+stickyMenu.addEventListener('click', function (e) {
+  if (!stickyLines.classList.contains('is-active')) {
+    stickyLines.classList.add('is-active');
+    scrollContainer.classList.add('sidebar-shown');
+    sidebarOverlay.classList.add('shown');
+    sidebar.classList.add('shown');
+  } else {
+    stickyLines.classList.remove('is-active');
+    scrollContainer.classList.remove('sidebar-shown');
+    sidebar.classList.remove('shown');
+  }
+});
+/* Sets submenu background to the width of the page
+*/
+
+function GetElementDistance(obj) {
+  var div = document.getElementById('web-background');
+  var topLen = div.getBoundingClientRect().top; // The distance (length) of div from the top of screen
+
+  var bottomLen = div.getBoundingClientRect().bottom; // The distance (length) of div from the bottom of screen
+
+  var leftLen = div.getBoundingClientRect().left; // The distance (length) of div from the left of screen
+
+  var rightLen = div.getBoundingClientRect().right; // The distance (length) of div from the right of screen
+
+  return "topLength=" + topLen + "; bottomLen=" + bottomLen + "; leftLen=" + leftLen + "; rightLen=" + rightLen;
+}
+
+document.write(GetElementDistance("divId"));

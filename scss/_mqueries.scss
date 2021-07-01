@@ -118,26 +118,6 @@
         @include container-lg;
     }
 
-    #header-container {
-        input {
-            display: none;
-        }
-    }
-
-    .logo {
-        max-width: 370px;
-    }
-
-    #md-search-submit {
-        border-radius: 3px;
-    }
-
-    .button-support,
-    .button-contact,
-    #nav-container {
-        display: block;
-    }
-
     .service-cards {
         align-items: stretch;
         > .bespoke-software,
@@ -195,13 +175,6 @@
         @include container-xl;
     }
 
-
-    #header-container {
-        input {
-            display: inline-block;
-            width: 240px;
-        }
-    }
 
     #md-search-submit {
         border-radius: 0 3px 3px 0;

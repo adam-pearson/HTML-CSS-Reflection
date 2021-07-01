@@ -1,6 +1,9 @@
-#nav-container {
+#nav-container, #sticky-nav-container {
     background-color: $primary-colour;
     display: none;
+    @include media-lg {
+        display: block;
+    }
 }
 
 .nav-inner {
@@ -173,7 +176,7 @@
 
 .nav-submenu {
     padding: 0 15px;
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
     left: -15px;
@@ -194,24 +197,35 @@
             color: $white;
         }
     }
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 100%;
-        width: 2000px;
-        background-color: $purple-2;
-    }
-    &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 100%;
-        width: 2000px;
-        background-color: $purple-2;
-    }
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     right: 100%;
+    //     width: 2000px;
+    //     background-color: $purple-2;
+    // }
+    // &::after {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     left: 100%;
+    //     width: 2000px;
+    //     background-color: $purple-2;
+    // }
+}
+
+#web-background {
+    width: 1500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 46px;
+    z-index: -1;
+    display: block;
+    background-color: $purple-2;
 }
