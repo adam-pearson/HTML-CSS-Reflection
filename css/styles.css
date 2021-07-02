@@ -170,6 +170,12 @@ button:focus {
   right: 275px;
 }
 
+@media (min-width: 992px) {
+  #scroll-container.sidebar-shown {
+    right: 350px;
+  }
+}
+
 #main {
   overflow-y: hidden;
   z-index: 10;
@@ -190,6 +196,12 @@ button:focus {
   cursor: pointer;
 }
 
+@media (min-width: 992px) {
+  #sidebar-overlay.shown {
+    right: 350px;
+  }
+}
+
 #sidebar {
   display: none;
   position: fixed;
@@ -203,9 +215,149 @@ button:focus {
   transition: .3s ease all;
 }
 
+@media (min-width: 992px) {
+  #sidebar {
+    right: -350px;
+    width: 350px;
+  }
+}
+
 #sidebar.shown {
   right: 0;
   display: block;
+}
+
+.main-sidebar-nav {
+  padding: 21px;
+}
+
+.main-sidebar-nav > ul {
+  margin-top: -20px;
+}
+
+.main-sidebar-nav > ul > li {
+  padding: 20px 0 0;
+}
+
+.sidebar-main-nav-button {
+  font-size: 1.125rem;
+  padding: 19px 0 18px;
+  border-radius: 3px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sidebar-main-nav-button * {
+  display: block;
+}
+
+.sidebar-main-nav-button i {
+  padding-bottom: 10px;
+  font-size: 1.438rem;
+}
+
+.sidebar-main-nav-button small {
+  font-size: .625rem;
+  padding-bottom: 5px;
+}
+
+.sidebar-submenu {
+  margin-top: 20px;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.sidebar-submenu li:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.sidebar-submenu li:not(:first-child) a {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-submenu li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+  line-height: 1.5;
+}
+
+#side-web i {
+  color: #926fb1;
+}
+
+#side-it i {
+  color: #4183d7;
+}
+
+#side-telecoms i {
+  color: #d64541;
+}
+
+#side-software i {
+  color: #67809f;
+}
+
+#side-marketing i {
+  color: #2ecc71;
+}
+
+#side-security i {
+  color: #f62459;
+}
+
+.main-sidebar-nav > ul > li:hover > a {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sec-sidebar-nav ul {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 0;
+  margin: 0;
+}
+
+.sec-sidebar-nav ul li a {
+  display: block;
+  color: #fff;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1;
+  position: relative;
+  background: transparent;
+}
+
+.sec-sidebar-nav ul ul > li > a {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 15px 20px;
+  text-transform: uppercase;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.second-menu-item a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  padding-right: 15px;
+  font-size: .5rem;
+  margin-top: -5px;
+}
+
+.submenu-heading {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sec-sidebar-nav > ul > li:hover > a {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 #header-container, #sticky-header-container {
