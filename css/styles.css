@@ -163,15 +163,20 @@ button:focus {
   overflow-x: hidden;
   z-index: 1;
   background: #fff;
+  transition: .2s ease all;
+  right: 0;
 }
 
 #scroll-container.sidebar-shown {
   height: 100vh;
+}
+
+#scroll-container.slide-in {
   right: 275px;
 }
 
 @media (min-width: 992px) {
-  #scroll-container.sidebar-shown {
+  #scroll-container.slide-in {
     right: 350px;
   }
 }
@@ -183,12 +188,13 @@ button:focus {
 
 #sidebar-overlay {
   display: none;
+  right: 0;
+  transition: .2s ease all;
 }
 
 #sidebar-overlay.shown {
   display: block;
   background-color: rgba(0, 0, 0, 0.4);
-  right: 275px;
   z-index: 10;
   position: fixed;
   width: 100%;
@@ -196,8 +202,12 @@ button:focus {
   cursor: pointer;
 }
 
+#sidebar-overlay.slide-in {
+  right: 275px;
+}
+
 @media (min-width: 992px) {
-  #sidebar-overlay.shown {
+  #sidebar-overlay.slide-in {
     right: 350px;
   }
 }
@@ -212,7 +222,7 @@ button:focus {
   z-index: 100;
   background-color: #333645;
   overflow: auto;
-  transition: .3s ease all;
+  transition: .2s ease all;
 }
 
 @media (min-width: 992px) {
@@ -223,8 +233,11 @@ button:focus {
 }
 
 #sidebar.shown {
-  right: 0;
   display: block;
+}
+
+#sidebar.slide-in {
+  right: 0;
 }
 
 .main-sidebar-nav {

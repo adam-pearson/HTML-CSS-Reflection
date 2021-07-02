@@ -5,8 +5,12 @@
     overflow-x: hidden;
     z-index: 1;
     background: $white;
+    transition: .2s ease all;
+    right: 0;
     &.sidebar-shown {
         height: 100vh;
+    }
+    &.slide-in{
         right: 275px;
         @include media-lg {
             right: 350px;
@@ -21,17 +25,21 @@
 
 #sidebar-overlay {
     display: none;
+    right: 0;
+    transition: .2s ease all;
     &.shown {
         display: block;
         background-color: rgba(0,0,0,.4);
-        right: 275px;
         z-index: 10;
         position: fixed;
         width: 100%;
         height: 100%;
         cursor: pointer;
+    }
+    &.slide-in {
+        right: 275px;
         @include media-lg {
-            right: 350px;
+            right: 350px
         }
     }
 }
@@ -46,14 +54,16 @@
     z-index: 100;
     background-color: #333645;
     overflow: auto;
-    transition: .3s ease all;
+    transition: .2s ease all;
     @include media-lg {
         right: -350px;
         width: 350px;
     }
     &.shown {
-        right: 0;
         display: block;
+    }
+    &.slide-in {
+        right: 0;
     }
 }
 
