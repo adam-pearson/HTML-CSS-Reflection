@@ -801,14 +801,6 @@ button:focus {
   color: #fff;
 }
 
-.web .web-menu {
-  background-color: #79539a;
-}
-
-.web .web-menu::before, .web .web-menu::after {
-  background-color: #79539a;
-}
-
 .web:hover .web-menu {
   display: block;
 }
@@ -841,14 +833,6 @@ button:focus {
   color: #fff;
 }
 
-.telecoms .telecoms-menu {
-  background-color: #bc2c28;
-}
-
-.telecoms .telecoms-menu::before, .telecoms .telecoms-menu::after {
-  background-color: #bc2c28;
-}
-
 .telecoms:hover .telecoms-menu {
   display: block;
 }
@@ -863,14 +847,6 @@ button:focus {
 
 .software:hover i {
   color: #fff;
-}
-
-.software .software-menu {
-  background-color: #526781;
-}
-
-.software .software-menu::before, .software .software-menu::after {
-  background-color: #526781;
 }
 
 .software:hover .software-menu {
@@ -889,14 +865,6 @@ button:focus {
   color: #fff;
 }
 
-.digital .digital-menu {
-  background-color: #25a25a;
-}
-
-.digital .digital-menu::before, .digital .digital-menu::after {
-  background-color: #25a25a;
-}
-
 .digital:hover .digital-menu {
   display: block;
 }
@@ -911,14 +879,6 @@ button:focus {
 
 .security:hover i {
   color: #fff;
-}
-
-.security .security-menu {
-  background-color: #de093f;
-}
-
-.security .security-menu::before, .security .security-menu::after {
-  background-color: #de093f;
 }
 
 .security:hover .security-menu {

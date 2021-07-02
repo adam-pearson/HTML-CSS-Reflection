@@ -64,12 +64,6 @@
             color: $white;
         }
     }
-    .web-menu {
-        background-color: $purple-2;
-        &::before, &::after {
-            background-color: $purple-2;
-        }
-    }
     &:hover .web-menu {
         display: block;
     }
@@ -100,12 +94,6 @@
             color: $white;
         }
     }
-    .telecoms-menu {
-        background-color: $red-2;
-        &::before, &::after {
-            background-color: $red-2;
-        }
-    }
     &:hover .telecoms-menu {
         display: block;
     }
@@ -119,12 +107,6 @@
         background-color: $dark-blue;
         i {
             color: $white;
-        }
-    }
-    .software-menu {
-        background-color: $dark-blue-2;
-        &::before, &::after {
-            background-color: $dark-blue-2;
         }
     }
     &:hover .software-menu {
@@ -142,12 +124,6 @@
             color: $white;
         }
     }
-    .digital-menu {
-        background-color: $green-2;
-        &::before, &::after {
-            background-color: $green-2;
-        }
-    }
     &:hover .digital-menu {
         display: block;
     }
@@ -161,12 +137,6 @@
         background-color: $pink;
         i {
             color: $white;
-        }
-    }
-    .security-menu {
-        background-color: $pink-2;
-        &::before, &::after {
-            background-color: $pink-2;
         }
     }
     &:hover .security-menu {

@@ -10,6 +10,9 @@ var pageContainer = document.getElementById('page-container');
 var sidebarOverlay = document.getElementById('sidebar-overlay');
 var sidebar = document.getElementById('sidebar');
 var scrollBarWidth = scrollContainer.offsetWidth - scrollContainer.clientWidth;
+var mainMenu = document.getElementsByClassName('main-menu');
+var subMenu = document.getElementsByClassName('nav-sub');
+var subBg = document.getElementsByClassName('sub-bg');
 /*  find the scrollbar width, set 
     header width to page width minus scrollbar width.
     if Mozernizr detects a hidden scrollbar, sets width to 100%
@@ -32,7 +35,7 @@ var lastScrollTop = 0;
 $('#scroll-container').scroll(function (event) {
   var st = $(this).scrollTop();
 
-  if (st > lastScrollTop) {
+  if (st > lastScrollTop && st >= 208) {
     $('#sticky-top').slideUp(150);
   } else {
     $('#sticky-top').slideDown(150);
@@ -116,7 +119,8 @@ sidebarOverlay.addEventListener('click', function (e) {
     sidebar.classList.remove('shown');
   }
 });
-/* Sets submenu background to the width of the page
+/* Finds the distance to the left and right of the screen
+   returns an array [left, right]
 */
 
 function GetElementDistance(obj) {
@@ -126,27 +130,23 @@ function GetElementDistance(obj) {
 
   return [leftLen, rightLen];
 }
+/*  sets the submenu background to stick to the left side of the page
+    then sets its width to the page width minus the scrollbar
+    does this on every mouseover event in case the screen size has changed
+    will reset the left distance back to 0 each time, to allow it to recalculate
+    the distance on each event (otherwise it will set it to 0 on every other hover)
+*/
 
-var mainMenu = document.getElementsByClassName('main-menu');
-var subMenu = document.getElementsByClassName('nav-sub');
-var subBg = document.getElementsByClassName('sub-bg');
-var childTest = document.getElementsByClassName('main-menu')[0].lastElementChild.lastElementChild; // (function showMenu() {
-//   var mainMenu = document.getElementsByClassName('main-menu');
-//   var subMenuBg = document.getElementsByClassName('sub-bg');
-//   for (var i = 0; i < mainMenu.length; i++) {
-//     mainMenu[i].addEventListener('mouseover', function(e) {
-//     });
-//     console.log(subMenuBg[i]);
-//   }
-// })();
 
 Array.from(mainMenu).forEach(function (mainMenu, index) {
   mainMenu.addEventListener('mouseenter', function () {
     var leftDistance = "-" + GetElementDistance(subBg[index])[0] + "px";
+    var contClientMinusDist = scrollContainer.clientWidth - leftDistance;
+    var contOffsetMinusDist = scrollContainer.offsetWidth - leftDistance;
 
     if (Modernizr.hiddenscroll === true) {
       $('.sub-bg').css({
-        "width": scrollcontainer.offsetWidth,
+        "width": scrollContainer.offsetWidth,
         "left": leftDistance
       });
     } else {
