@@ -252,6 +252,12 @@ button:focus {
   padding: 20px 0 0;
 }
 
+@media (min-width: 992px) {
+  .main-sidebar-nav {
+    display: none;
+  }
+}
+
 .sidebar-main-nav-button {
   font-size: 1.125rem;
   padding: 19px 0 18px;

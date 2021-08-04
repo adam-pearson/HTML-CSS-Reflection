@@ -77,6 +77,9 @@
             padding: 20px 0 0;
         }
     }
+    @include media-lg {
+        display: none;
+    }
 }
 
 .sidebar-main-nav-button {
