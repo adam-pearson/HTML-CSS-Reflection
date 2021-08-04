@@ -32,7 +32,7 @@ $(window).resize(function () {
  */
 
 var lastScrollTop = 0;
-$('#scroll-container').scroll(function (event) {
+$('#scroll-container').on("scroll", function (event) {
   var st = $(this).scrollTop();
 
   if (st > lastScrollTop && st >= 208) {
@@ -168,8 +168,6 @@ function GetElementDistance(obj) {
 Array.from(mainMenu).forEach(function (mainMenu, index) {
   mainMenu.addEventListener('mouseenter', function () {
     var leftDistance = "-" + GetElementDistance(subBg[index])[0] + "px";
-    var contClientMinusDist = scrollContainer.clientWidth - leftDistance;
-    var contOffsetMinusDist = scrollContainer.offsetWidth - leftDistance;
 
     if (Modernizr.hiddenscroll === true) {
       $('.sub-bg').css({
