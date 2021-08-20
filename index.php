@@ -11,14 +11,13 @@
 <div id="main" class="pushed2">
 
 <?php include "./inc/header.php" ?>
-
 <?php include "./inc/nav.php" ?>
 
 </div>
 
 <!-- hero slider -->
 <div class="hero-slider-container owl-carousel owl-theme">
-    
+
         <div class="hero-slider1">
             <div class="hero-image">
                 <img src="img/home-3wAI.jpg" alt="Web Design" data-object-fit="contain">
