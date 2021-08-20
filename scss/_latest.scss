@@ -128,41 +128,97 @@
     }
 }
 
-.latest-card {
-    &-1 {
-        .latest-category, 
-        .latest-button {
-            background-color: $blue;
-        }
-        .latest-button:hover {
-            background-color: $blue-2;
-        }
-        h3 {
-            color: $blue;
-        }
+.case-studies {
+    .latest-category, 
+    .latest-button {
+        background-color: $case-studies;
     }
-    &-2 {
-        .latest-category,
-        .latest-button {
-            background-color: $purple;
-        }
-        .latest-button:hover {
-                background-color: $purple-2;
-        }
-        h3 {
-            color: $purple;
-        }
+    .latest-button:hover {
+        background-color: $case-studies-hover;
     }
-    &-3 {
-        .latest-category,
-        .latest-button {
-            background-color: $red;
-        }
-        .latest-button:hover {
-                background-color: $red-2;
-        }
-        h3 {
-            color: $red;
-        }
+    h3 {
+        color: $case-studies;
     }
 }
+
+.portfolio {
+    .latest-category, 
+    .latest-button {
+        background-color: $portfolio;
+    }
+    .latest-button:hover {
+        background-color: $portfolio-hover;
+    }
+    h3 {
+        color: $portfolio;
+    }
+}
+
+.guides {
+    .latest-category, 
+    .latest-button {
+        background-color: $guides;
+    }
+    .latest-button:hover {
+        background-color: $guides-hover;
+    }
+    h3 {
+        color: $guides;
+    }
+}
+
+.news {
+    .latest-category, 
+    .latest-button {
+        background-color: $news;
+    }
+    .latest-button:hover {
+        background-color: $news-hover;
+    }
+    h3 {
+        color: $news;
+    }
+}
+
+.insights {
+    .latest-category, 
+    .latest-button {
+        background-color: $insights;
+    }
+    .latest-button:hover {
+        background-color: $insights-hover;
+    }
+    h3 {
+        color: $insights;
+    }
+}
+
+.careers {
+    .latest-category, 
+    .latest-button {
+        background-color: $careers;
+    }
+    .latest-button:hover {
+        background-color: $careers-hover;
+    }
+    h3 {
+        color: $careers;
+    }
+}
+
+.environmental {
+    .latest-category, 
+    .latest-button {
+        background-color: $environmental;
+    }
+    .latest-button:hover {
+        background-color: $environmental-hover;
+    }
+    h3 {
+        color: $environmental;
+    }
+}
+
+
+
+

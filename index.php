@@ -1,6 +1,8 @@
 <?php
 
 require __DIR__ . "/inc/connection.php";
+require __DIR__ . "/inc/functions.php";
+
 
 ?>
 
@@ -253,7 +255,44 @@ require __DIR__ . "/inc/connection.php";
         <div class="latest-cards-container width-margin">
             <div class="latest-cards">
                 
-                <div class="latest-card-1">
+                <?php
+                    foreach (pullNews($db) as $key => $news) {
+
+                    $date = new DateTime($news['date']);
+
+                    echo '<div class="' . str_replace(' ', '-', $news['category_name']) . ' latest-card-' . $key+1 . '">';
+                    echo    '<div class="img-container">';
+                    echo        '<a href="#" class="latest-category">' . $news['category_name'] . '</a>';
+                    echo        '<a class="latest-img" href="#">';
+                    echo            '<img src="' . $news['news_image'] . '" alt="Now Hiring Support Technician">';
+                    echo        '</a>';
+                    echo    '</div>';
+                    echo    '<div class="latest-content">';
+                    echo        '<a href="#" target="_blank">';
+                    echo            '<h3>' . $news['heading'] . '</h3>';
+                    echo        '</a>';
+                    echo        '<p>' . $news['description'] . '</p>';
+                    echo        '<a href="#">';
+                    echo            '<div class="btn latest-button">Read More</div>';
+                    echo        '</a>';
+                    echo        '<div class="latest-user">';
+                    echo            '<div class="latest-avatar">';
+                    echo                '<img src="' . $news['profile_image'] . '" alt="' . $news['full_name'] . '">';
+                    echo           '</div>';
+                    echo            '<div class="latest-details">';
+                    echo                '<strong class="primary-text">Posted by ' . $news['full_name'] . '</strong>';
+                    echo                '<br>';
+                    echo                $date->format('jS F Y');
+                    echo            '</div>';
+                    echo        '</div>';
+                    echo    '</div>';
+                    echo '</div>';
+
+                    }
+                ?>
+
+
+                <!-- <div class="latest-card-1">
                     <div class="img-container">
                         <a href="#" class="latest-category">Careers</a>
                         <a class="latest-img" href="#">
@@ -279,9 +318,9 @@ require __DIR__ . "/inc/connection.php";
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="latest-card-2">
+                <!-- <div class="latest-card-2">
                     <div class="img-container">
                         <a href="#" class="latest-category">News</a>
                         <a class="latest-img" href="#">
@@ -335,7 +374,8 @@ require __DIR__ . "/inc/connection.php";
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
             </div>
         </div>
 </div>

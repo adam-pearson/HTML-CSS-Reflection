@@ -1542,43 +1542,95 @@ button:focus {
   font-weight: 600;
 }
 
-.latest-card-1 .latest-category,
-.latest-card-1 .latest-button {
-  background-color: #4183d7;
+.case-studies .latest-category,
+.case-studies .latest-button {
+  background-color: #f62459;
 }
 
-.latest-card-1 .latest-button:hover {
-  background-color: #286abd;
+.case-studies .latest-button:hover {
+  background-color: #e80a42;
 }
 
-.latest-card-1 h3 {
-  color: #4183d7;
+.case-studies h3 {
+  color: #f62459;
 }
 
-.latest-card-2 .latest-category,
-.latest-card-2 .latest-button {
+.portfolio .latest-category,
+.portfolio .latest-button {
   background-color: #926fb1;
 }
 
-.latest-card-2 .latest-button:hover {
-  background-color: #79539a;
+.portfolio .latest-button:hover {
+  background-color: #7e57a0;
 }
 
-.latest-card-2 h3 {
+.portfolio h3 {
   color: #926fb1;
 }
 
-.latest-card-3 .latest-category,
-.latest-card-3 .latest-button {
+.guides .latest-category,
+.guides .latest-button {
+  background-color: #2ecc71;
+}
+
+.guides .latest-button:hover {
+  background-color: #26ab5f;
+}
+
+.guides h3 {
+  color: #2ecc71;
+}
+
+.news .latest-category,
+.news .latest-button {
+  background-color: #4183d7;
+}
+
+.news .latest-button:hover {
+  background-color: #2a6ec6;
+}
+
+.news h3 {
+  color: #4183d7;
+}
+
+.insights .latest-category,
+.insights .latest-button {
   background-color: #d64541;
 }
 
-.latest-card-3 .latest-button:hover {
-  background-color: #bc2c28;
+.insights .latest-button:hover {
+  background-color: #c42e2a;
 }
 
-.latest-card-3 h3 {
+.insights h3 {
   color: #d64541;
+}
+
+.careers .latest-category,
+.careers .latest-button {
+  background-color: #926fb1;
+}
+
+.careers .latest-button:hover {
+  background-color: #7e57a0;
+}
+
+.careers h3 {
+  color: #926fb1;
+}
+
+.environmental .latest-category,
+.environmental .latest-button {
+  background-color: #926fb1;
+}
+
+.environmental .latest-button:hover {
+  background-color: #7e57a0;
+}
+
+.environmental h3 {
+  color: #926fb1;
 }
 
 #logo-section {
@@ -2002,17 +2054,15 @@ footer {
   .latest-cards {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: flex-start;
     margin-top: auto;
   }
   .latest-card-1 {
-    margin-top: auto;
-    align-self: stretch;
+    margin-right: 15px;
+    flex: 1;
   }
   .latest-card-2 {
-    align-self: stretch;
-    margin-top: auto;
-    margin-left: 30px;
+    margin-left: 15px;
+    flex: 1;
   }
   .latest-card-3 {
     display: none;
@@ -2119,9 +2169,13 @@ footer {
   .about-inner {
     width: 50%;
   }
+  .latest-card-2 {
+    margin-right: 15px;
+  }
   .latest-card-3 {
     display: block;
-    margin-left: 30px;
+    margin-left: 15px;
+    flex: 1;
   }
   .footer-flex * {
     flex: 25%;
