@@ -1,3 +1,9 @@
+<?php
+
+require __DIR__ . "/inc/connection.php";
+
+?>
+
 <?php include "./inc/head.php" ?>
 
 <body class="fixed-position">
