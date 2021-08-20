@@ -11,7 +11,17 @@
         <link rel="stylesheet" type="text/css" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
         <link rel="stylesheet" type="text/css" href="css/hamburgers.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        
+        <?php
+
+        if ($_SERVER['REQUEST_URI'] == "/contact.php") {
+            echo '<link rel="stylesheet" type="text/css" href="css/contact.css">';
+        } else {
+            echo '<link rel="stylesheet" type="text/css" href="css/styles.css">';
+        }
+        
+
+        ?>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

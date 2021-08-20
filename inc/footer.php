@@ -1,5 +1,5 @@
 <footer>
-                        <div class="footer-inner">
+                        <div class="footer-inner width-margin">
                             <div class="footer-flex width-margin">
                                 <div class="footer-column-1">
                                     <h4>About Netmatters</h4>
