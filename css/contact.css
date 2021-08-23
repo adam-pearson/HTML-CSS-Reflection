@@ -1530,8 +1530,160 @@ footer {
   }
 }
 
+.page-head {
+  margin-bottom: 20px;
+  background-color: #333645;
+  padding: 24px 0;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page-head h1 {
+  font-weight: 400;
+  margin: 0;
+  max-width: 750px;
+}
+
+@media (min-width: 992px) {
+  .page-head {
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: initial;
+    color: #333645;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 15px 28px 15px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1260px) {
+  .page-head {
+    width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: initial;
+    color: #333645;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 15px 28px 15px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-offices {
+    margin-bottom: 40px;
+  }
+}
+
+.offices-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .offices-flex {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .offices {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.offices-block {
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 992px) {
+  .offices-block {
+    margin-top: 0;
+  }
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 30px;
+}
+
+.content h2 {
+  margin-top: 0;
+  color: #333645;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.content p {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.content h2:hover {
+  text-decoration: underline;
+}
+
+.office-tel {
+  display: block;
+  color: #926fb1;
+  font-weight: 700;
+  font-size: 1.625rem;
+}
+
+.office-tel:hover {
+  text-decoration: underline;
+}
+
+.office-btn {
+  margin-top: 15px;
+  font-size: .9rem;
+  padding: 5px 30px;
+  color: #fff;
+  background-color: #926fb1;
+  height: auto;
+  line-height: 35px;
+}
+
+.office-btn:hover {
+  background-color: #79539a;
+}
+
+.offices-map {
+  width: 100%;
+  height: 300px;
+}
+
+.mapouter {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.gmap_canvas {
+  height: 300px;
+}
+
+#gmap_canvas {
+  width: 100%;
+  height: 100%;
+}
+
 .contact-outer {
-  padding-top: 50px;
+  padding-top: 15px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column-reverse;
@@ -1551,7 +1703,9 @@ footer {
 
 .contact-side p {
   line-height: 1.875rem;
+  margin-top: 0;
   margin-bottom: 25px;
+  font-weight: 600;
 }
 
 .contact-email-text {
@@ -1621,7 +1775,7 @@ footer {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
-.form-group {
+.contact-form-group {
   margin-right: 15px;
   margin-left: 15px;
   display: flex;
@@ -1631,18 +1785,38 @@ footer {
   flex-direction: column;
 }
 
-.form-group label {
-  margin-bottom: 5px;
+.contact-form-group:nth-of-type(n+2) {
+  margin-top: 15px;
 }
 
-.form-group input {
+@media (min-width: 992px) {
+  .contact-form-group {
+    width: 50%;
+    margin-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contact-form-group:nth-of-type(n+2) {
+    margin-top: 0;
+  }
+  .contact-form-group:nth-of-type(n+3) {
+    margin-top: 15px;
+  }
+}
+
+.contact-form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-form-group input {
   width: 100%;
   font-size: 14px;
   line-height: 1.4px;
   color: #555;
 }
 
-.form-group textarea {
+.contact-form-group textarea {
   min-height: 100px;
   height: 100px;
   border-color: #ccc;
@@ -1654,18 +1828,10 @@ footer {
   color: #555;
 }
 
-.form-group textarea:focus {
+.contact-form-group textarea:focus {
   border-color: #5bc0de;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
-}
-
-@media (min-width: 992px) {
-  .form-group {
-    width: 50%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -1680,9 +1846,15 @@ footer {
   color: #d24d57;
 }
 
-.marketing-check {
+.contact-marketing-check {
+  margin-top: 15px;
   margin-right: 15px;
-  margin-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .contact-marketing-check {
+    margin-left: 15px;
+  }
 }
 
 .checkmark-contact {
@@ -1694,12 +1866,17 @@ footer {
   color: #fff;
   height: auto;
   margin-right: 15px;
-  margin-left: 15px;
   line-height: 35px;
   padding: 5px 15px;
   font-size: 1.063rem;
   border-radius: 3px;
   border: 1px solid transparent;
+}
+
+@media (min-width: 992px) {
+  .contact-form-submit {
+    margin-left: 15px;
+  }
 }
 
 .contact-form-submit:hover {

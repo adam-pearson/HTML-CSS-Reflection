@@ -63,8 +63,147 @@ font-feature-settings: 'liga';
     }
 }
 
+
+.page-head {
+    margin-bottom: 20px;
+    background-color: #333645;
+    padding: 24px 0;
+    color: $white;
+    padding-left: 15px;
+    padding-right: 15px;
+    h1 {
+        font-weight: 400;
+        margin: 0;
+        max-width: 750px;
+    }
+
+    @include media-lg {
+        @include container-lg;
+        background-color: initial;
+        color: #333645;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px 15px 28px 15px;
+        margin-bottom: 0;
+    }
+    @include media-xl {
+        @include container-xl;
+        background-color: initial;
+        color: #333645;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px 15px 28px 15px;
+        margin-bottom: 0;
+    }
+}
+
+
+// Offices Section
+
+.contact-offices {
+    @include media-lg {
+        margin-bottom: 40px;
+    }
+}
+
+.offices-flex {
+    display: flex;
+    flex-direction: column;
+    @include media-lg {
+        flex-direction: row;
+    }
+}
+
+.offices {
+    // width: 100%;
+    @include media-lg {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.offices-block {
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 3px 35px rgba(0,0,0,0.1);
+    @include media-lg {
+        margin-top: 0;
+    }
+}
+
+.image img{
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    padding: 30px;
+    h2 {
+        margin-top: 0;
+        color: #333645;
+        font-size: 1.125rem;
+        font-weight: 400;
+    }
+    p {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    h2:hover {
+        text-decoration: underline;
+    }
+}
+
+.office-tel {
+    display: block;
+    color: $purple;
+    font-weight: 700;
+    font-size: 1.625rem;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.office-btn {
+    margin-top: 15px;
+    font-size: .9rem;
+    padding: 5px 30px;
+    color: $white;
+    background-color: $purple;
+    height: auto;
+    line-height: 35px;
+    &:hover {
+        background-color: $purple-2;
+    }
+}
+
+.offices-map {
+    width: 100%;
+    height: 300px
+}
+
+.mapouter {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.gmap_canvas {
+    height: 300px;
+}
+
+#gmap_canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+// Contact Form
+
 .contact-outer {
-    padding-top: 50px;
+    padding-top: 15px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: column-reverse;
@@ -79,7 +218,9 @@ font-feature-settings: 'liga';
     margin-bottom: 25px;
     p {
         line-height: 1.875rem;
+        margin-top: 0;
         margin-bottom: 25px;
+        font-weight: 600;
     }
 }
 
@@ -143,15 +284,32 @@ font-feature-settings: 'liga';
     }
 }
 
-.form-group {
+.contact-form-group {
     margin-right: 15px;
     margin-left: 15px;
     display: flex;
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
+    flex-direction: column;
+    &:nth-of-type(n+2) {
+        margin-top: 15px;
+    }
+    @include media-lg {
+        width: 50%;
+        margin-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        &:nth-of-type(n+2) {
+            margin-top: 0;
+        }
+        &:nth-of-type(n+3) {
+            margin-top: 15px;
+        }
+    }
     label {
         margin-bottom: 5px;
+        font-weight: 600;
     }
     input {
         width: 100%;
@@ -175,12 +333,7 @@ font-feature-settings: 'liga';
             box-shadow: inset 0 1px 1px rgba(0,0,0,.08), 0 0 8px rgba(91, 192, 222, 0.6);
         }
     }
-    flex-direction: column;
-    @include media-lg {
-        width: 50%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+
 }
 
 .form-group-textarea {
@@ -195,9 +348,12 @@ font-feature-settings: 'liga';
     color: #d24d57;
 }
 
-.marketing-check {
+.contact-marketing-check {
+    margin-top: 15px;
     margin-right: 15px;
-    margin-left: 15px;
+    @include media-lg {
+        margin-left: 15px;
+    }
 }
 
 .checkmark-contact {
@@ -209,14 +365,18 @@ font-feature-settings: 'liga';
     color: $white;
     height: auto;
     margin-right: 15px;
-    margin-left: 15px;
     line-height: 35px;
     padding: 5px 15px;
     font-size: 1.063rem;
     border-radius: 3px;
     border: 1px solid transparent;
+    @include media-lg {
+        margin-left: 15px;
+    }
     &:hover {
         background-color: $purple-2;
     }
+
 }
+
 
