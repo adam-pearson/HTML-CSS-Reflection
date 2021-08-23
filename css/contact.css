@@ -1882,4 +1882,51 @@ footer {
 .contact-form-submit:hover {
   background-color: #79539a;
 }
+
+.message {
+  display: none;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background-color: #526781;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .message {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.message span {
+  flex: 1;
+}
+
+.message button {
+  border-radius: 5px;
+  background-color: transparent;
+  margin-right: 0;
+  padding: .5rem .5rem;
+}
+
+.message button i {
+  transition: all .2s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.message button:hover {
+  color: #ddd;
+}
+
+.message.success {
+  display: flex;
+  background-color: #2ecc71;
+}
+
+.message.error {
+  display: flex;
+  background-color: #d64541;
+}
 /*# sourceMappingURL=contact.css.map */

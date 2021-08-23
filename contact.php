@@ -22,28 +22,16 @@ include "./inc/nav.php";
 </div>
 <?php 
 
-// echo $_POST['name'] . "\n";
-// echo $_POST['email'] . "\n";
-// echo $_POST['phone_number'] . "\n";
-// echo $_POST['subject'] . "\n";
-// echo $_POST['message'] . "\n\n";
-
-// if (isset($_POST['newsletter_signup'])) {
-//     $newsletter = 1;
-// } else {
-//     $newsletter = 0;
-// }
-
-// var_dump($newsletter);
-
+$contactArray = [];
 
 if (isset($_POST['submit'])) {
 
-    if (isset($_POST['name'])
-    && isset($_POST['email'])
-    && isset($_POST['phone_number'])
-    && isset($_POST['subject'])
-    && isset($_POST['message'])) {
+    if (!empty($_POST['name'])
+    && !empty($_POST['email'])
+    && !empty($_POST['phone_number'])
+    && !empty($_POST['subject'])
+    && !empty($_POST['message'])) {
+
        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
        if (filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)) {
            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -60,23 +48,22 @@ if (isset($_POST['submit'])) {
             $newsletter = false;
        }
 
-   } else {
-       echo "<p>Please fill in all details</p>";
+       $contactArray = [
+        "name" => $name,
+        "email" => $email,
+        "phone" => $phone,
+        "subject" => $subject,
+        "message" => $message,
+        "newsletter" => $newsletter
+       ];
+
+       postContact($db, $contactArray);
    }
-
-   $contactArray = [
-    "name" => $name,
-    "email" => $email,
-    "phone" => $phone,
-    "subject" => $subject,
-    "message" => $message,
-    "newsletter" => $newsletter
-   ];
-
-   postContact($db, $contactArray);
+   
+   $message = createMessage($contactArray);
 }
 
- 
+
 
 ?>
 <div class="contact-offices width-margin">    
@@ -164,24 +151,34 @@ if (isset($_POST['submit'])) {
 
 <div class="contact-outer width-margin">
     <div class="contact-inner">
-    <?php echo "<p>Error: Please fill out all details</p>"?>
+        
+    <div class="message <?php if (isset($_POST['submit']) && !empty($contactArray)) {
+            echo "success";
+        } elseif (isset($_POST['submit']) && empty($contactArray))  {
+            echo "error";
+        }
+        ?>">
+        <?php echo $message ?></span>
+        <button type="button" id="close-message"><i class="fas fa-times"></i></button>
+    </div>
+
     <form action="/contact.php" method="post">
         <div class="contact-form-group">
             <label for="name" class="required">Your Name</label>
-            <input type="text" name="name" id="name" class="contact-field">
+            <input type="text" name="name" id="name" class="contact-field" required>
         </div>
         <div class="contact-form-group">
             <label for="email" class="required">Your Email</label>
-            <input type="email" name="email" id="email" class="contact-field">
+            <input type="email" name="email" id="email" class="contact-field" required> 
         </div>
 
         <div class="contact-form-group">
             <label for="phone_number" class="required">Your Telephone Number</label>
-            <input type="text" name="phone_number" id="phone_number" class="contact-field">
+            <input type="number" name="phone_number" id="phone_number" class="contact-field" required>
         </div>
         <div class="contact-form-group">
             <label for="subject" class="required">Subject</label>
-            <input type="text" name="subject" id="subject" class="contact-field">
+            <input type="text" name="subject" id="subject" class="contact-field" required>
         </div>
         <div class="contact-form-group form-group-textarea">
             <label for="message" class="required">Message</label>

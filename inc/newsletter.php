@@ -13,7 +13,7 @@
                 <div class="sign-up-input">
                     <div class="newsletter form-group">
                         <label for="newsletter-email" class="required">Your Email</label>
-                        <input class="sign-up-field" id="newsletter-email" name="email" type="text" required>
+                        <input class="sign-up-field" id="newsletter-email" name="email" type="text" >
                     </div>
                 </div>
             </div>

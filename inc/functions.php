@@ -47,3 +47,37 @@ function postContact($db, $contactArray) {
         echo $e->getMessage();
     }
 }
+
+
+// Get error or success message for contact form
+
+function createMessage($contactArray) {
+
+    $messageArr = [];
+
+    if (empty($_POST['name'])) {
+        $messageArr[] = "name";
+    }
+    if (empty($_POST['email'])) {
+        $messageArr[] = "email";
+    }
+    if (empty($_POST['phone_number'])) {
+        $messageArr[] = "phone number";
+    }
+    if (empty($_POST['subject'])) {
+        $messageArr[] = "subject";
+    }
+    if (empty($_POST['message'])) {
+        $messageArr[] = "message";
+    }
+
+    if (isset($_POST['submit']) && !empty($contactArray)) {
+        $message = "Form was submitted successfully!";
+    } else {
+        $message = "Error: please enter a valid ";
+        $message .= implode(", ", $messageArr);
+    } 
+
+    return $message;
+
+}
