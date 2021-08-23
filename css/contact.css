@@ -983,6 +983,38 @@ button:focus {
   background-color: #de093f;
 }
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/MaterialIcons-Regular.woff2) format("woff2"), url(/MaterialIcons-Regular.woff) format("woff"), url(/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
 #newsletter-container {
   background-color: #ddd;
 }
@@ -1444,33 +1476,233 @@ footer {
   }
 }
 
-.contact-outer {
-  margin-top: 150px;
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/MaterialIcons-Regular.woff2) format("woff2"), url(/MaterialIcons-Regular.woff) format("woff"), url(/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+#spacer {
+  height: 150px;
 }
 
 @media (min-width: 576px) {
-  .contact-outer {
-    margin-top: 168px;
+  #spacer {
+    height: 168px;
   }
 }
 
 @media (min-width: 768px) {
-  .contact-outer {
-    margin-top: 110px;
+  #spacer {
+    height: 110px;
   }
 }
 
 @media (min-width: 992px) {
-  .contact-outer {
-    margin-top: 208px;
+  #spacer {
+    height: 208px;
   }
 }
 
+.contact-outer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 1260px) {
+  .contact-outer {
+    flex-direction: row;
+  }
+}
+
+.contact-side {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-side p {
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
+.contact-email-text {
+  font-weight: 600;
+  color: #926fb1;
+  font-size: 1.625rem;
+}
+
+.contact-email-text:hover {
+  text-decoration: underline;
+}
+
+.out-of-hours-btn {
+  color: #333645;
+  display: inline-block;
+}
+
+.out-of-hours-btn p {
+  display: inline;
+}
+
+.out-of-hours-btn i {
+  margin-left: .5rem;
+}
+
+.out-of-hours-btn:hover {
+  text-decoration: underline;
+}
+
+.hidden-contact-text {
+  display: none;
+}
+
 .contact-inner {
-  padding: 50px 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 30px 15px;
+  background-color: #e6e7e9;
+  border-radius: 10px;
 }
 
 .contact-inner h1 {
   margin: 0;
+}
+
+.contact-inner form {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact-field {
+  height: 47px;
+  width: 45%;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  border-color: #ccc;
+  padding: 5px 15px;
+}
+
+.contact-field:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+.form-group {
+  margin-right: 15px;
+  margin-left: 15px;
+  display: flex;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.4px;
+  color: #555;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  height: 100px;
+  border-color: #ccc;
+  padding: 5px 15px;
+  border-radius: 2px;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  line-height: 1.4rem;
+  color: #555;
+}
+
+.form-group textarea:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+@media (min-width: 992px) {
+  .form-group {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-group-textarea {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.required::after {
+  content: " *";
+  color: #d24d57;
+}
+
+.marketing-check {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.checkmark-contact {
+  background-color: #e6e7e9;
+}
+
+.contact-form-submit {
+  background-color: #926fb1;
+  color: #fff;
+  height: auto;
+  margin-right: 15px;
+  margin-left: 15px;
+  line-height: 35px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.contact-form-submit:hover {
+  background-color: #79539a;
 }
 /*# sourceMappingURL=contact.css.map */

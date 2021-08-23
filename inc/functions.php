@@ -6,7 +6,7 @@ function pullNews($db) {
                   FROM news
                   JOIN authors ON news.author_id = authors.id
                   JOIN category ON news.category_id = category.id
-                  ORDER BY news.date ASC
+                  ORDER BY news.date DESC
                   LIMIT 3";
         $stmt = $db->prepare($query);
         $stmt->execute();
