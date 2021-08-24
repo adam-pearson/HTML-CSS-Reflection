@@ -422,6 +422,7 @@ font-feature-settings: 'liga';
 // Error/Success Message
 
 .message {
+    display: none;
     margin-bottom: 15px;
     padding: 5px 15px;
     background-color: $dark-blue-2;

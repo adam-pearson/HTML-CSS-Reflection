@@ -5,7 +5,12 @@ var oohText = document.querySelector(".hidden-contact-text");
 var mapBtns = document.querySelectorAll('.map-btn');
 var maps = document.querySelectorAll('.offices-map');
 var msgBox = document.querySelector(".message");
-var closeMsg = document.querySelector("#close-message"); // show or hide out of hours IT support text
+var closeMsg = document.querySelector("#close-message");
+var inputName = document.querySelector("#name");
+var inputEmail = document.querySelector("#email");
+var inputPhone = document.querySelector("#phone_number");
+var inputSubject = document.querySelector("#subject");
+var inputMessage = document.querySelector("#message"); // show or hide out of hours IT support text
 
 oohBtn.addEventListener('click', function () {
   oohText.classList.toggle("shown");
@@ -25,4 +30,36 @@ mapBtns.forEach(function (button, i) {
 
 closeMsg.addEventListener("click", function () {
   msgBox.style.display = "none";
-});
+}); // validation for the form
+// function validateForm() {
+//     let formName = document.forms.contact_form.name.value;
+//     if (formName == "" || formName == " ") {
+//         inputName.style.border = "1px solid red";
+//         return false;
+//     }
+//     let formEmail = document.forms.contact_form.email.value;
+//     if (formEmail == "" || formEmail == " ") {
+//         inputEmail.style.border = "1px solid red";
+//         return false;
+//     }
+//     let formPhone = document.forms.contact_form.phone_number.value;
+//     if (formPhone == "" || formPhone == " ") {
+//         inputPhone.style.border = "1px solid red";
+//         return false;
+//     }
+//     let formSubject = document.forms.contact_form.subject.value;
+//     if (formSubject == "" || formSubject == " ") {
+//         inputSubject.style.border = "1px solid red";
+//         return false;
+//     }
+//     let formMessage = document.forms.contact_form.message.value;
+//     if (formMessage == "" || formMessage == " ") {
+//         inputMessage.style.border = "1px solid red";
+//         return false;
+//     }
+//     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     if (re.test(formEmail == false)) {
+//         inputEmail.style.border = "1px solid red";
+//         return re.test(formEmail);
+//     }
+// }

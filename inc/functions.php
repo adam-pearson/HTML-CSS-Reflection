@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/vendor/autoload.php";
+require __DIR__ . "/../vendor/autoload.php";
 
 ini_set('display_errors', 1);
 
@@ -85,9 +85,9 @@ function createMessage($contactArray) {
 }
 
 
-// clean textarea html
+// clean html from a text or textarea input
 
-function cleanTextArea($dirty_html) {
+function cleanHtml($dirty_html) {
 
 $config = HTMLPurifier_Config::createDefault();
 $purifier = new HTMLPurifier($config);

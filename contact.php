@@ -36,8 +36,8 @@ if (isset($_POST['submit'])) {
        $name = $_POST['name'];
        $email = $_POST['email'];
        $phone = $_POST['phone_number'];
-       $subject = $_POST['subject'];
-       $message = $_POST['message'];
+       $subject = cleanHtml($_POST['subject']);
+       $message = cleanHtml($_POST['message']);
 
        if (isset($_POST['newsletter_signup'])) {
             $newsletter = true;
@@ -87,7 +87,6 @@ if (isset($_POST['submit'])) {
                     </button>
                 </div>
                 <button class="btn map-btn">
-                    <!-- <i class="fas fa-chevron-up"></i> -->
                     <i class="fas fa-chevron-down"></i>
                 </button>
             </div>
@@ -117,7 +116,6 @@ if (isset($_POST['submit'])) {
                     </button>
                 </div>
                 <button class="btn map-btn">
-                    <!-- <i class="fas fa-chevron-up"></i> -->
                     <i class="fas fa-chevron-down"></i>
                 </button>
             </div>
@@ -147,7 +145,6 @@ if (isset($_POST['submit'])) {
                     </button>
                 </div>
                 <button class="btn map-btn">
-                    <!-- <i class="fas fa-chevron-up"></i> -->
                     <i class="fas fa-chevron-down"></i>
                 </button>
             </div>
@@ -171,32 +168,32 @@ if (isset($_POST['submit'])) {
         <button type="button" id="close-message"><i class="fas fa-times"></i></button>
     </div>
 
-    <form action="/contact.php" method="post">
+    <form action="/contact.php" method="post" id="contact_form" onsubmit="return validateForm()">
         <div class="contact-form-group">
             <label for="name" class="required">Your Name</label>
-            <input type="text" name="name" id="name" class="contact-field" required>
+            <input type="text" name="name" id="name" class="contact-field" value="<?php if (isset($_POST['name']) && empty($contactArray)) echo $_POST['name']?>" required>
         </div>
         <div class="contact-form-group">
             <label for="email" class="required">Your Email</label>
-            <input type="email" name="email" id="email" class="contact-field" required> 
+            <input type="email" name="email" id="email" class="contact-field" value="<?php if (isset($_POST['email']) && empty($contactArray)) echo $_POST['email']?>" required>
         </div>
 
         <div class="contact-form-group">
             <label for="phone_number" class="required">Your Telephone Number</label>
-            <input type="number" name="phone_number" id="phone_number" class="contact-field" required>
+            <input type="tel" name="phone_number" id="phone_number" class="contact-field" value="<?php if (isset($_POST['phone_number']) && empty($contactArray)) echo $_POST['phone_number']?>" required>
         </div>
         <div class="contact-form-group">
             <label for="subject" class="required">Subject</label>
-            <input type="text" name="subject" id="subject" class="contact-field" required>
+            <input type="text" name="subject" id="subject" class="contact-field" value="<?php if (isset($_POST['subject']) && empty($contactArray)) echo $_POST['subject']?>" required>
         </div>
         <div class="contact-form-group form-group-textarea">
             <label for="message" class="required">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea name="message" id="message"><?php if (isset($_POST['message']) && empty($contactArray)) echo $_POST['message']?></textarea>
         </div>
         <div class="contact-marketing-check">
                 <div class="marketing-check-content">
                     <label class="checkbox-container">
-                        <input type="checkbox" name="newsletter_signup[]" id="newsletter_signup">
+                        <input type="checkbox" name="newsletter_signup[]" id="newsletter_signup" <?php if (isset($_POST['newsletter_signup']) && empty($contactArray)) echo "checked"?>>
                         <span class="checkmark checkmark-contact">
                             <span class="check material-icons-outlined">&#xe876;</span>
                         </span>
