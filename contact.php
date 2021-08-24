@@ -2,6 +2,7 @@
 
 require __DIR__ . "/inc/connection.php";
 require __DIR__ . "/inc/functions.php";
+require __DIR__ . "/vendor/autoload.php";
 
 include "./inc/head.php";
 
@@ -32,15 +33,11 @@ if (isset($_POST['submit'])) {
     && !empty($_POST['subject'])
     && !empty($_POST['message'])) {
 
-       $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-       if (filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)) {
-           $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-       } else {
-           echo "<p>Please enter a valid email address</p>";
-       }
-       $phone = filter_input(INPUT_POST, 'phone_number', FILTER_SANITIZE_STRING);
-       $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
-       $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+       $name = $_POST['name'];
+       $email = $_POST['email'];
+       $phone = $_POST['phone_number'];
+       $subject = $_POST['subject'];
+       $message = $_POST['message'];
 
        if (isset($_POST['newsletter_signup'])) {
             $newsletter = true;
@@ -60,7 +57,7 @@ if (isset($_POST['submit'])) {
        postContact($db, $contactArray);
    }
    
-   $message = createMessage($contactArray);
+   $completeMessage = createMessage($contactArray);
 }
 
 
@@ -89,9 +86,13 @@ if (isset($_POST['submit'])) {
                         View More
                     </button>
                 </div>
+                <button class="btn map-btn">
+                    <!-- <i class="fas fa-chevron-up"></i> -->
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
             <div class="offices-map">
-                <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=netmatters%20cambridge&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br></div></div>
+                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" id="gmap_canvas" src="https://maps.google.com/maps?q=netmatters%20cambridge&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe><br></div></div>
             </div>
         </div>
         <div class="offices office-wym">
@@ -115,9 +116,13 @@ if (isset($_POST['submit'])) {
                         View More
                     </button>
                 </div>
+                <button class="btn map-btn">
+                    <!-- <i class="fas fa-chevron-up"></i> -->
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
             <div class="offices-map">
-                <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=netmatters%20wymondham&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br></div></div>
+                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" id="gmap_canvas2" src="https://maps.google.com/maps?q=netmatters%20wymondham&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe><br></div></div>
             </div>
         </div>
         <div class="offices office-yar">
@@ -141,9 +146,13 @@ if (isset($_POST['submit'])) {
                         View More
                     </button>
                 </div>
+                <button class="btn map-btn">
+                    <!-- <i class="fas fa-chevron-up"></i> -->
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
             <div class="offices-map">
-                <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=netmatters%20great%20yarmouth&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br></div></div>
+                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" id="gmap_canvas3" src="https://maps.google.com/maps?q=netmatters%20great%20yarmouth&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe><br></div></div>
             </div>
         </div>
     </div>
@@ -158,7 +167,7 @@ if (isset($_POST['submit'])) {
             echo "error";
         }
         ?>">
-        <?php echo $message ?></span>
+        <span><?php if (isset($completeMessage)) echo $completeMessage ?></span>
         <button type="button" id="close-message"><i class="fas fa-times"></i></button>
     </div>
 
@@ -182,14 +191,14 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="contact-form-group form-group-textarea">
             <label for="message" class="required">Message</label>
-            <textarea name="message"></textarea>
+            <textarea name="message" id="message"></textarea>
         </div>
         <div class="contact-marketing-check">
                 <div class="marketing-check-content">
                     <label class="checkbox-container">
                         <input type="checkbox" name="newsletter_signup[]" id="newsletter_signup">
                         <span class="checkmark checkmark-contact">
-                            <span class="check material-icons-outlined">&#xe876</span>
+                            <span class="check material-icons-outlined">&#xe876;</span>
                         </span>
                         <span class="checkbox-text">
                             Please tick this box if you wish to receive marketing information from us. Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
@@ -198,7 +207,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         
-        <input type="submit" class="btn contact-form-submit" name="submit" value="SEND ENQUIRY"></input>
+        <input type="submit" class="btn contact-form-submit" name="submit" value="SEND ENQUIRY">
         
     </form>
     </div>
@@ -236,11 +245,6 @@ if (isset($_POST['submit'])) {
 <?php include "./inc/newsletter.php" ?>
 
 <?php include "./inc/footer.php"; ?>
-
-</div>
-</div>
-</div>
-</div>
 
 <?php
 

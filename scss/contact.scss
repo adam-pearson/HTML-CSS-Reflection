@@ -23,6 +23,7 @@
       url(/MaterialIcons-Regular.ttf) format('truetype');
   }
 
+
 .material-icons {
 font-family: 'Material Icons';
 font-weight: normal;
@@ -79,7 +80,7 @@ font-feature-settings: 'liga';
 
     @include media-lg {
         @include container-lg;
-        background-color: initial;
+        background-color: transparent;
         color: #333645;
         margin-left: auto;
         margin-right: auto;
@@ -109,8 +110,12 @@ font-feature-settings: 'liga';
 .offices-flex {
     display: flex;
     flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
     @include media-lg {
         flex-direction: row;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -119,6 +124,9 @@ font-feature-settings: 'liga';
     @include media-lg {
         margin-left: 15px;
         margin-right: 15px;
+    }
+    @include media-ie {
+        height: 50%;
     }
 }
 
@@ -133,12 +141,13 @@ font-feature-settings: 'liga';
 }
 
 .image img{
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
 
 .content {
-    padding: 30px;
+    padding: 30px 30px 0 30px;
     h2 {
         margin-top: 0;
         color: #333645;
@@ -179,7 +188,23 @@ font-feature-settings: 'liga';
     }
 }
 
+.map-btn {
+    display: block;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    color: $purple;
+    padding-top: 15px;
+    width: 100%;
+    background: rgb(221,221,221);
+    background: linear-gradient(0deg, rgba(221,221,221,0.4962359943977591) 0%, rgba(58,80,107,0) 100%);
+    &:hover {
+        color: $purple-2;
+    }
+}
+
 .offices-map {
+    display: none;
     width: 100%;
     height: 300px
 }
@@ -190,13 +215,10 @@ font-feature-settings: 'liga';
     margin: 0;
 }
 
-.gmap_canvas {
+.gmap_iframe {
     height: 300px;
-}
-
-#gmap_canvas {
     width: 100%;
-    height: 100%;
+    border: 0;
 }
 
 
@@ -221,6 +243,9 @@ font-feature-settings: 'liga';
         margin-top: 0;
         margin-bottom: 25px;
         font-weight: 600;
+    }
+    @include media-xl {
+        width: 33.3%;
     }
 }
 
@@ -249,6 +274,10 @@ font-feature-settings: 'liga';
 
 .hidden-contact-text {
     display: none;
+    padding-top: 25px;
+    p {
+        font-weight: 400;
+    }
 }
 
 .contact-inner {
@@ -257,6 +286,7 @@ font-feature-settings: 'liga';
     padding: 30px 15px;
     background-color: #e6e7e9;
     border-radius: 10px;
+    height: 100%;
     h1 {
         margin: 0;
     }
@@ -266,6 +296,16 @@ font-feature-settings: 'liga';
         flex-wrap: wrap;
         width: 100%;
     }
+    @include media-ie {
+        width: auto;
+    }
+    @include media-xl {
+        width: 69.6%;
+        @include media-ie {
+            width: 100%;
+        }
+    }
+
 } 
 
 .contact-field {
@@ -382,7 +422,6 @@ font-feature-settings: 'liga';
 // Error/Success Message
 
 .message {
-    display: none;
     margin-bottom: 15px;
     padding: 5px 15px;
     background-color: $dark-blue-2;
@@ -417,4 +456,8 @@ font-feature-settings: 'liga';
         display: flex;
         background-color: $red;
     }
+}
+
+.shown {
+    display: block;
 }

@@ -2,7 +2,7 @@
 <div id="sticky-header-container" class="width-margin">
 <div class="header-top">
     <div class="logo-container">
-        <a class="logo-link" href="#">
+        <a class="logo-link" href="/">
             <img class="logo" src="img/f-logo.png" alt="Netmatters logo">
         </a>
         </div>
@@ -13,12 +13,12 @@
                     <span>Support</span>
                 </div>
             </div>
-            <div class="contact">
+            <a class="contact" href="/contact.php">
                 <div class="btn button-contact">
                     <i class="fas fa-paper-plane"></i>
                     Contact
                 </div>
-            </div>
+            </a>
             <div class="md-search">
                 <form method="GET" action="#" class="md-search-form">
                     <input type="text" class="md-search-bar" placeholder="Search..." id="search-input" name="site-search">

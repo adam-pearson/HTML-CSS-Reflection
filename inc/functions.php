@@ -1,6 +1,8 @@
 <?php
 
-// ini_set('display_errors', 0);
+require __DIR__ . "/vendor/autoload.php";
+
+ini_set('display_errors', 1);
 
 /**
  *  Pull news posts from the database
@@ -79,5 +81,18 @@ function createMessage($contactArray) {
     } 
 
     return $message;
+
+}
+
+
+// clean textarea html
+
+function cleanTextArea($dirty_html) {
+
+$config = HTMLPurifier_Config::createDefault();
+$purifier = new HTMLPurifier($config);
+$clean_html = $purifier->purify($dirty_html);
+
+return $clean_html;
 
 }

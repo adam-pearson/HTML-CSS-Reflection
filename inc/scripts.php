@@ -6,3 +6,8 @@
 <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 <script src="js/dist/object-fit-polyfill.js"></script>
 <script src="js/dist/app.js"></script>
+<?php
+    if ($_SERVER['REQUEST_URI'] == "/contact.php") {
+        echo '<script src="js/dist/contact.js"></script>';
+    }
+?>
