@@ -257,7 +257,7 @@ require __DIR__ . "/inc/functions.php";
 
                     $date = new DateTime($news['date']);
 
-                    echo '<div class="' . str_replace(' ', '-', $news['category_name']) . ' latest-card-' . $key+1 . '">';
+                    echo '<div class="' . str_replace(' ', '-', $news['category_name']) . ' latest-card-' . ($key + 1) . '">';
                     echo    '<div class="img-container">';
                     echo        '<a href="#" class="latest-category">' . $news['category_name'] . '</a>';
                     echo        '<a class="latest-img" href="#">';
@@ -287,91 +287,6 @@ require __DIR__ . "/inc/functions.php";
 
                     }
                 ?>
-
-
-                <!-- <div class="latest-card-1">
-                    <div class="img-container">
-                        <a href="#" class="latest-category">Careers</a>
-                        <a class="latest-img" href="#">
-                            <img src="img/senior-it-support-Vfd9.jpg" alt="Now Hiring Support Technician">
-                        </a>
-                    </div>
-                    <div class="latest-content">
-                        <a href="#" target="_blank">
-                            <h3>Senior IT Support Technician</h3>
-                        </a>
-                        <p>Salary Range Salary (subject to experience) + Profit Share + Pension Hours 40 hours per week, Monday...</p>
-                        <a href="#">
-                            <div class="btn latest-button">Read More</div>
-                        </a>
-                        <div class="latest-user">
-                            <div class="latest-avatar">
-                                <img src="img/rob-george-zFWY.jpg" alt="Rob George">
-                            </div>
-                            <div class="latest-details">
-                                <strong class="primary-text">Posted by Rob George</strong>
-                                <br>
-                                17th May 2021
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- <div class="latest-card-2">
-                    <div class="img-container">
-                        <a href="#" class="latest-category">News</a>
-                        <a class="latest-img" href="#">
-                            <img src="img/congratulations-to-lloyd-D2cu.jpg" alt="Another Scion Graduates">
-                        </a>
-                    </div>
-                    <div class="latest-content">
-                        <a href="#" target="_blank">
-                            <h3>Congratulations to Lloyd Cox for Graduating t...</h3>
-                        </a>
-                        <p>We are pleased to announce that after a year spent on our Netmatters Scion Coalition Scheme (SCS), L...</p>
-                        <a href="#">
-                            <div class="btn latest-button">Read More</div>
-                        </a>
-                        <div class="latest-user">
-                            <div class="latest-avatar">
-                                <img src="img/joe-trower-qV03.jpg" alt="Joe Trower">
-                            </div>
-                            <div class="latest-details">
-                                <strong class="primary-text">Posted by Joe Trower</strong>
-                                <br>
-                                21st May 2021
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="latest-card-3">
-                    <div class="img-container">
-                        <a href="#" class="latest-category">News</a>
-                        <a class="latest-img" href="#">
-                            <img src="img/april-2021-notables-CIV3.jpg" alt="April 2021 Notables">
-                        </a>
-                    </div>
-                    <div class="latest-content">
-                        <a href="#" target="_blank">
-                            <h3>April 2021 Notables</h3>
-                        </a>
-                        <p>Every month we celebrate the most notable of employees here at Netmatters. Each department head is a...</p>
-                        <a href="#">
-                            <div class="btn latest-button">Read More</div>
-                        </a>
-                        <div class="latest-user">
-                            <div class="latest-avatar">
-                                <img src="img/lydia-whitney-u5hO.jpg" alt="Netmatters">
-                            </div>
-                            <div class="latest-details">
-                                <strong class="primary-text">Posted by Lydia Whitney</strong>
-                                <br>
-                                24th May 2021
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
 
             </div>
         </div>
