@@ -1,7 +1,7 @@
 <div id="sidebar">
     <div class="main-sidebar-nav">
         <ul>
-            <li><a href="#" class="sidebar-main-nav-button">Contact Us</a></li>
+            <li><a href="/contact.php" class="sidebar-main-nav-button">Contact Us</a></li>
             <li id="side-web">
                 <a href="#" class="sidebar-main-nav-button">
                     <i class="fas fa-code"></i>
@@ -168,7 +168,7 @@
                 <a href="#" class="submenu-heading">COVID Risk Assessments</a>
             </li>
             <li>
-                <a href="#" class="submenu-heading">Contact Us</a>
+                <a href="/contact.php" class="submenu-heading">Contact Us</a>
                 <ul>
                     <li class="second-menu-item">
                         <a href="#">Cambridge Office</a>
