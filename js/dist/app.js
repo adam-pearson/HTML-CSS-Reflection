@@ -99,7 +99,6 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
     setCookie("accepted", "true", 30);
     scrollContainer.classList.remove('fixed-position');
     popup.classList.remove('shown');
-    console.log("worked");
   });
 } // side menu
 
