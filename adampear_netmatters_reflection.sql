@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Sep 07, 2021 at 04:59 PM
--- Server version: 8.0.26
--- PHP Version: 7.3.28
+-- Host: 127.0.0.1
+-- Generation Time: Sep 08, 2021 at 10:58 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `authors` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `full_name` varchar(255) DEFAULT NULL,
   `profile_image` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `authors`
@@ -60,9 +59,9 @@ INSERT INTO `authors` (`id`, `full_name`, `profile_image`) VALUES
 --
 
 CREATE TABLE `category` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `category_name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `category`
@@ -84,14 +83,14 @@ INSERT INTO `category` (`id`, `category_name`) VALUES
 --
 
 CREATE TABLE `contact` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `phone_number` varchar(15) DEFAULT NULL,
   `subject` varchar(255) DEFAULT NULL,
-  `message` text,
+  `message` text DEFAULT NULL,
   `newsletter_check` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `contact`
@@ -100,7 +99,8 @@ CREATE TABLE `contact` (
 INSERT INTO `contact` (`id`, `email`, `name`, `phone_number`, `subject`, `message`, `newsletter_check`) VALUES
 (1, 'adam.pearson94@gmail.com', 'Adam Pearson', '07402203156', 'Am I your first email?', 'First email message test. Blah de blah de blah. Oh ho ho. Ah ha ha. AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH boop', 1),
 (2, 'bobblestop@bibcop.com', 'Bob Buckley', '09362457645', 'Hey BOB here with another message from our sponsors', 'Are you tired of dining alone? Need a friend to accompany you? Your problems are solved with RENT-A-PAL rentals incorporated. Duckduckgo us to find out more.', 1),
-(3, 'adam.pearson94@gmail.com', 'Adam Pearson', '07402203156', 'Testing Form', 'Test', 1);
+(3, 'adam.pearson94@gmail.com', 'Adam Pearson', '07402203156', 'Testing Form', 'Test', 1),
+(4, 'adam.pearson94@gmail.com', 'Adam Pearson', '07402203156', 'Hello, this is a test email', 'Does this message work? Has the database been restored after your total hard drive failure? If so, congratulations! Panic over!', 1);
 
 -- --------------------------------------------------------
 
@@ -109,14 +109,14 @@ INSERT INTO `contact` (`id`, `email`, `name`, `phone_number`, `subject`, `messag
 --
 
 CREATE TABLE `news` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `heading` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `news_image` varchar(255) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
-  `category_id` int DEFAULT NULL,
-  `author_id` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `category_id` int(11) DEFAULT NULL,
+  `author_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `news`
@@ -174,25 +174,25 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
