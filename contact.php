@@ -4,6 +4,9 @@ require __DIR__ . "/inc/connection.php";
 require __DIR__ . "/inc/functions.php";
 require __DIR__ . "/vendor/autoload.php";
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 include "./inc/head.php";
 
 echo '<div id="scroll-container">';
