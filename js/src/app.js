@@ -37,8 +37,10 @@ var lastScrollTop = 0;
 $('#scroll-container').on("scroll", function(event) {
    var st = $(this).scrollTop();
    if (st > lastScrollTop && st >= 208){
+    //  console.log(st);
+     console.log(lastScrollTop);
     $('#sticky-top').slideUp({duration: 300, easing: "easeInOutQuart"});
-   } else {
+   } else if (st < (lastScrollTop + 200)) {
     $('#sticky-top').slideDown({duration: 300, easing: "easeInOutQuart"});
    }
    lastScrollTop = st;

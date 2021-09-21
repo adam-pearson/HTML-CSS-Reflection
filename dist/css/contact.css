@@ -1815,7 +1815,6 @@ footer {
   color: #fff;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 @media (min-width: 992px) {
   .message {
@@ -1848,18 +1847,10 @@ footer {
   background-color: #d64541;
 }
 
-.message-jump:target {
-  display: block;
-  position: relative;
-  top: -215px;
-  visibility: hidden;
-}
-
 .shown {
   display: block;
 }
 
-input.fieldError,
-.contact-form-group textarea.fieldError {
+.fieldError {
   border: 1px solid red;
 }/*# sourceMappingURL=contact.css.map */

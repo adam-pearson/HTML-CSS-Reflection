@@ -157,14 +157,14 @@ if (isset($_POST['submit'])) {
 
 <div class="contact-outer width-margin">
     <div class="contact-inner">
-        
-    <div class="message <?php if (isset($_POST['submit']) && !empty($contactArray)) {
+    <div id="message-jump" class="message-jump"></div>
+    <div id="formMessage" class="message <?php if (isset($_POST['submit']) && !empty($contactArray)) {
             echo "success";
         } elseif (isset($_POST['submit']) && empty($contactArray))  {
             echo "error";
         }
         ?>">
-        <span><?php if (isset($completeMessage)) echo $completeMessage ?></span>
+        <span id="messageText"><?php if (isset($completeMessage)) echo $completeMessage ?></span>
         <button type="button" id="close-message"><i class="fas fa-times"></i></button>
     </div>
 
@@ -204,7 +204,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         
-        <input type="submit" class="btn contact-form-submit" name="submit" value="SEND ENQUIRY">
+        <input id="submit" type="submit" class="btn contact-form-submit" name="submit" value="SEND ENQUIRY">
         
     </form>
     </div>

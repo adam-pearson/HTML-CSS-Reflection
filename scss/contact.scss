@@ -421,6 +421,8 @@ font-feature-settings: 'liga';
 
 // Error/Success Message
 
+
+
 .message {
     display: none;
     margin-bottom: 15px;
@@ -429,6 +431,7 @@ font-feature-settings: 'liga';
     color: $white;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     @include media-lg {
         margin-left: 15px;
         margin-right: 15px;
@@ -459,6 +462,18 @@ font-feature-settings: 'liga';
     }
 }
 
+.message-jump:target {
+    display: block;
+    position: relative;
+    top: -215px;
+    visibility: hidden;
+}
+
 .shown {
     display: block;
+}
+
+input.fieldError,
+.contact-form-group textarea.fieldError {
+    border: 1px solid red;
 }

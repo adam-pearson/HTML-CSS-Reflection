@@ -36,11 +36,13 @@ $('#scroll-container').on("scroll", function (event) {
   var st = $(this).scrollTop();
 
   if (st > lastScrollTop && st >= 208) {
+    //  console.log(st);
+    console.log(lastScrollTop);
     $('#sticky-top').slideUp({
       duration: 300,
       easing: "easeInOutQuart"
     });
-  } else {
+  } else if (st < lastScrollTop + 200) {
     $('#sticky-top').slideDown({
       duration: 300,
       easing: "easeInOutQuart"
@@ -99,6 +101,7 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
     setCookie("accepted", "true", 30);
     scrollContainer.classList.remove('fixed-position');
     popup.classList.remove('shown');
+    console.log("worked");
   });
 } // side menu
 
